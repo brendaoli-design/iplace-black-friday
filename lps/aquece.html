@@ -1,0 +1,2870 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><base href="https://www.iplace.com.br/"><title>Aquece Black</title></head><body style="margin:0;background:#101010">
+<div class="raw-html-embed">
+    <div class="row-full">
+
+
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   LANDING PAGE BLACK FRIDAY - IPLACE
+   ======================================== */
+
+/* Reset e configurações globais */
+.LP_BlackFriday_container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.LP_BlackFriday_container {
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #101010;
+    padding-bottom: 120px;
+}
+
+/* ========================================
+   BARRA FIXA NO TOPO
+   ======================================== */
+
+.LP_BlackFriday_fixed_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: #101010;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estado após scroll - barra compacta */
+.LP_BlackFriday_fixed_bar.LP_BlackFriday_scrolled {
+    padding: 2px;
+    border-bottom: 1px solid #808080;
+}
+
+.LP_BlackFriday_fixed_bar_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 42px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LP_BlackFriday_logo_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.LP_BlackFriday_logo {
+    height: auto;
+    width: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img.LP_BlackFriday_logo_mob {
+    height: auto;
+    width: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+}
+
+.LP_BlackFriday_scrolled .LP_BlackFriday_fixed_bar_content {
+    transform: scale(0.65);
+}
+
+/* ========================================
+   COUNTDOWN
+   ======================================== */
+
+.LP_BlackFriday_countdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LP_BlackFriday_countdown_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 18px 9px;
+    min-width: 60px;
+    border-radius: 8.779px;
+    border: 0.878px solid rgba(255, 255, 255, 0.85);
+    background: #1D1D1D;
+    box-shadow: 0 4.389px 4.389px 0 rgba(0, 0, 0, 0.61), 0 7.711px 21.933px 0 rgba(0, 0, 0, 0.76);
+}
+
+.LP_BlackFriday_countdown_number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LP_BlackFriday_countdown_label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: lowercase;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.LP_BlackFriday_countdown_separator {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 -2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ========================================
+   BANNER PRINCIPAL
+   ======================================== */
+
+.LP_BlackFriday_banner_wrapper {
+    width: 100%;
+    margin-top: 0;
+    transition: margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transição suave */
+}
+
+.LP_BlackFriday_banner_img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SEÇÃO DE OFERTAS
+   ======================================== */
+
+.LP_BlackFriday_offers_section {
+    padding: 60px 0;
+}
+
+.LP_BlackFriday_content_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 90%;
+}
+
+.LP_BlackFriday_section_title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+/* ========================================
+   FILTROS
+   ======================================== */
+
+.LP_BlackFriday_filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto 50px;
+}
+
+.LP_BlackFriday_filter_btn {
+    cursor: pointer;
+    border-radius: 23.975px;
+    border: 0.999px solid rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #CFCFCF;
+    text-align: center;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 15.983px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24.138px;
+    transition: all 0.3s ease;
+}
+
+.LP_BlackFriday_filter_btn:hover {
+    background-color: #000;
+    border-color: #C4D200;
+    transition: all 0.3s ease;
+}
+
+.LP_BlackFriday_filter_active {
+    background-color: #C4D200 !important;
+    color: #000000 !important;
+    border-color: #C4D200 !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   GRID DE PRODUTOS
+   ======================================== */
+
+.LP_BlackFriday_products_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.LP_BlackFriday_products_grid a {
+    text-decoration: none;
+}
+
+.LP_BlackFriday_product_card {
+    padding: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background: #000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.LP_BlackFriday_product_card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #c9d400be;
+    transition: all 0.3s ease;
+}
+
+.LP_BlackFriday_discount_badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #C4D200;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.LP_BlackFriday_product_image_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.LP_BlackFriday_product_textos {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.LP_BlackFriday_product_image {
+    width: 100%;
+}
+
+.LP_BlackFriday_product_brand {
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0.5px;
+}
+
+.LP_BlackFriday_product_name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    height: auto;
+    min-height: 54px;
+}
+
+.LP_BlackFriday_product_price_old {
+    font-size: 16px;
+    color: #7F7F7F;
+    text-decoration: line-through;
+    margin-bottom: 6px;
+}
+
+.LP_BlackFriday_product_price_principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.LP_BlackFriday_product_price_current {
+    font-size: 32px;
+    font-weight: 700;
+    color: #C4D200;
+    letter-spacing: -2px;
+}
+
+.LP_BlackFriday_product_price_installment {
+    font-size: 20px;
+    color: #CCCCCC;
+    margin-left: 5px;
+}
+
+.LP_BlackFriday_product_price_detail {
+    color: #CCC;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.LP_BlackFriday_product_btn {
+    background-color: #C4D200;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    margin-top: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.LP_BlackFriday_product_btn:hover {
+    background-color: #d4e200;
+    transform: scale(1.02);
+}
+
+/* ========================================
+   CTA FINAL
+   ======================================== */
+
+.LP_BlackFriday_cta_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+a.LP_BlackFriday_cta_btn {
+    color: #000;
+    text-decoration: none;
+}
+
+.LP_BlackFriday_cta_btn {
+    background-color: #C4D200;
+    color: #000000;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 18px 50px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.LP_BlackFriday_cta_btn:hover {
+    background-color: #d4e200;
+    transform: scale(1.025);
+    box-shadow: 0 10px 30px rgba(98, 105, 0, 0.3);
+}
+
+/* ========================================
+   SEÇÃO DE CADASTRO
+   ======================================== */
+
+.LP_BlackFriday_register_section {
+    padding: 80px 0;
+}
+
+.LP_BlackFriday_register_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.LP_BlackFriday_register_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LP_BlackFriday_register_image img {
+    width: 100%;
+}
+
+.LP_BlackFriday_register_emoji {
+    font-size: 200px;
+    line-height: 1;
+}
+
+.LP_BlackFriday_register_form_wrapper {
+    border-radius: 16px;
+    background: #000;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.LP_BlackFriday_register_header h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Checkboxes de Interesses */
+
+.LP_BlackFriday_checkbox_section {
+    margin-bottom: 25px;
+}
+
+.LP_BlackFriday_checkbox_title {
+    font-size: 14px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.LP_BlackFriday_checkbox_grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.LP_BlackFriday_checkbox_option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.LP_BlackFriday_checkbox_option:hover {
+    background-color: #2a2a2a;
+}
+
+.LP_BlackFriday_checkbox_option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #C4D200;
+}
+
+.LP_BlackFriday_checkbox_option span {
+    color: rgba(255, 255, 255, 0.90);
+    text-align: center;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+/* Subtítulo do formulário */
+
+.LP_BlackFriday_form_subtitle {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Campos do formulário */
+
+.LP_BlackFriday_dadospessoais_section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
+
+.LP_BlackFriday_form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.LP_BlackFriday_form_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.LP_BlackFriday_form_content {
+    width: 100%;
+    max-width: 100%;
+}
+
+.LP_BlackFriday_form_content form input {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    background: rgba(255, 255, 255, 0.10);
+    display: flex;
+    padding: 11px 16px;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+.LP_BlackFriday_form_content form p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 119%;
+    margin-bottom: 12px;
+}
+
+.LP_BlackFriday_form_content form input:focus,
+.LP_BlackFriday_form_group input:focus {
+    outline: none;
+    border-color: #C4D200;
+}
+
+.LP_BlackFriday_form_group input::placeholder {
+    color: #666666;
+}
+
+.LP_BlackFriday_error_message {
+    font-size: 12px;
+    color: #ff4444;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+.LP_BlackFriday_submit_btn {
+    width: auto;
+    min-width: 132px;
+    background-color: #C4D200;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    height: 40px;
+    margin-left: 12px;
+}
+
+.LP_BlackFriday_submit_btn:hover {
+    background-color: #d4e200;
+}
+
+/* Mensagem de sucesso */
+
+.LP_BlackFriday_success_message {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.LP_BlackFriday_success_message.active {
+    display: block;
+}
+
+.LP_BlackFriday_success_icon {
+    width: 80px;
+    height: 80px;
+    background-color: #C4D200;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 auto 25px;
+}
+
+.LP_BlackFriday_success_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.LP_BlackFriday_success_text {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Outros conteúdos */
+
+.LP_BlackFriday_Conteudos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 120px;
+}
+
+.LP_BlackFriday_BlocoConteudo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 24px;
+}
+
+.LP_BlackFriday_BlocoConteudo h2 {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 13.893px 7.409px 22.321px rgba(0, 0, 0, 0.58);
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36.421px;
+    letter-spacing: 1.08px;
+}
+
+.LP_BlackFriday_BlocoConteudo img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.LP_BlackFriday_BlocoConteudo img:nth-child(2) {
+    display: block;
+}
+
+.LP_BlackFriday_BlocoConteudo img:nth-child(3) {
+    display: none;
+}
+
+
+.LP_BlackFriday_FAQ,
+.LP_BlackFriday_tags {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: #0C0C0C;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.LP_BlackFriday_FAQ h2,
+.LP_BlackFriday_tags h3 {
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 113%;
+    /* 40.68px */
+}
+
+.LP_BlackFriday_FAQ_conteudo {
+    display: flex;
+    padding: 0 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.LP_BlackFriday_FAQ_conteudo details {
+    border-radius: 16px;
+    background: #171717;
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.LP_BlackFriday_FAQ_conteudo details summary {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.LP_BlackFriday_FAQ_conteudo details summary h3 {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: "SF Pro Display";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 113%;
+    /* 27.12px */
+}
+
+.LP_BlackFriday_FAQ_conteudo details p,
+.LP_BlackFriday_FAQ_conteudo details ul {
+    color: rgb(255 255 255 / 85%);
+    font-family: "SF Pro Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 16px 16px 0;
+    width: 97%;
+    margin: 0 auto;
+    letter-spacing: 0.3px;
+}
+
+.LP_BlackFriday_FAQ_conteudo details p a {
+    color: #0071EC;
+}
+
+.LP_BlackFriday_FAQ_conteudo details ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 auto;
+    margin-left: 30px;
+}
+
+.LP_BlackFriday_FAQ_conteudo details[open] {
+    padding-bottom: 24px;
+}
+
+.LP_BlackFriday_FAQ_conteudo details[open] hr {
+    width: 97%;
+    margin: 0 auto;
+    border-color: #4f4f4f;
+}
+
+.LP_BlackFriday_FAQ_conteudo details[open] summary img {
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.LP_BlackFriday_tags_grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 9px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.LP_BlackFriday_tags_grid a {
+    color: rgba(255, 255, 255, 0.90);
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 16px */
+    border-radius: 8px;
+    background: #2D2D2D;
+    padding: 8px 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.LP_BlackFriday_tags_grid a:hover {
+    transition: all 0.3s ease;
+    color: #000;
+    background-color: #C4D200;
+}
+
+
+
+
+/* ========================================
+   RESPONSIVIDADE - TABLETS (1024px)
+   ======================================== */
+
+@media screen and (max-width: 1024px) {
+    .LP_BlackFriday_fixed_bar_content {
+        padding: 0 30px;
+    }
+
+    .LP_BlackFriday_logo {
+        height: 55px;
+    }
+
+    .LP_BlackFriday_countdown_item {
+        min-width: 55px;
+        padding: 6px 10px;
+    }
+
+    .LP_BlackFriday_countdown_number {
+        font-size: 22px;
+    }
+
+    .LP_BlackFriday_offers_section {
+        padding: 50px 0;
+    }
+
+    .LP_BlackFriday_content_wrapper {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .LP_BlackFriday_products_grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .LP_BlackFriday_section_title {
+        font-size: 28px;
+    }
+
+    .LP_BlackFriday_banner_wrapper {
+        margin-top: 0;
+    }
+
+    .LP_BlackFriday_filters {
+        max-width: 100%;
+        margin: 0 auto 30px;
+    }
+
+    .LP_BlackFriday_register_section {
+        padding: 60px 0;
+    }
+
+    .LP_BlackFriday_register_grid {
+        gap: 40px;
+    }
+
+    .LP_BlackFriday_register_emoji {
+        font-size: 150px;
+    }
+
+    .LP_BlackFriday_register_form_wrapper {
+        padding: 35px;
+    }
+
+    .LP_BlackFriday_checkbox_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* ========================================
+   RESPONSIVIDADE - TABLETS/MOBILE (768px)
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+    .LP_BlackFriday_fixed_bar {
+        padding: 12px 0;
+    }
+
+    .LP_BlackFriday_fixed_bar.LP_BlackFriday_scrolled {
+        padding: 2px 0;
+    }
+
+    .LP_BlackFriday_fixed_bar_content {
+        padding: 0 5%;
+        gap: 15px;
+    }
+
+    .LP_BlackFriday_logo {
+        height: 48px;
+    }
+
+    .LP_BlackFriday_scrolled .LP_BlackFriday_logo {
+        height: 30px;
+    }
+
+    .LP_BlackFriday_countdown {
+        gap: 4px;
+    }
+
+    .LP_BlackFriday_countdown_item {
+        min-width: 45px;
+        padding: 6px 8px;
+        border-radius: 6px;
+    }
+
+    .LP_BlackFriday_countdown_number {
+        font-size: 20px;
+    }
+
+    .LP_BlackFriday_scrolled .LP_BlackFriday_countdown_number {
+        font-size: 16px;
+    }
+
+    .LP_BlackFriday_countdown_label {
+        font-size: 10px;
+    }
+
+    .LP_BlackFriday_scrolled .LP_BlackFriday_countdown_label {
+        font-size: 8px;
+        line-height: 100%;
+    }
+
+    .LP_BlackFriday_countdown_separator {
+        font-size: 18px;
+    }
+
+    .LP_BlackFriday_banner_wrapper {
+        margin-top: 0;
+    }
+
+    .LP_BlackFriday_offers_section {
+        padding: 40px 0;
+    }
+
+    .LP_BlackFriday_content_wrapper {
+        width: 90%;
+    }
+
+    .LP_BlackFriday_section_title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .LP_BlackFriday_filters {
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .LP_BlackFriday_filter_btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .LP_BlackFriday_products_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .LP_BlackFriday_product_card {
+        padding: 0;
+    }
+
+    .LP_BlackFriday_discount_badge {
+        font-size: 12px;
+        padding: 5px 10px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .LP_BlackFriday_product_name {
+        font-size: 14px;
+        min-height: 35px;
+    }
+
+    .LP_BlackFriday_product_price_current {
+        font-size: 20px;
+    }
+
+    .LP_BlackFriday_product_price_installment {
+        font-size: 12px;
+    }
+
+    .LP_BlackFriday_product_btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .LP_BlackFriday_cta_btn {
+        font-size: 16px;
+        padding: 16px 40px;
+    }
+
+    .LP_BlackFriday_register_section {
+        padding: 50px 0;
+    }
+
+    .LP_BlackFriday_register_grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .LP_BlackFriday_register_emoji {
+        font-size: 120px;
+    }
+
+    .LP_BlackFriday_register_form_wrapper {
+        padding: 30px 25px;
+    }
+
+    .LP_BlackFriday_register_title {
+        font-size: 22px;
+    }
+
+    .LP_BlackFriday_checkbox_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .LP_BlackFriday_checkbox_option {
+        padding: 6px;
+    }
+
+    .LP_BlackFriday_checkbox_option span {
+        font-size: 12px;
+    }
+
+    .LP_BlackFriday_form_row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .LP_BlackFriday_success_icon {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    .LP_BlackFriday_success_title {
+        font-size: 20px;
+    }
+
+    .LP_BlackFriday_success_text {
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE - MOBILE (568px)
+   ======================================== */
+
+@media screen and (max-width: 568px) {
+    .LP_BlackFriday_filters {
+        margin-bottom: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .LP_BlackFriday_filter_btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .LP_BlackFriday_product_card {
+        padding: 0;
+        border-radius: 8px;
+        height: 100%;
+    }
+
+    .LP_BlackFriday_product_textos {
+        padding: 16px 10px;
+        gap: 10px;
+    }
+
+    .LP_BlackFriday_product_price_old,
+    .LP_BlackFriday_product_name,
+    .LP_BlackFriday_product_price_detail,
+    .LP_BlackFriday_product_btn {
+        font-size: 12px;
+        margin: 0;
+        min-height: auto;
+    }
+
+    .LP_BlackFriday_register_grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .LP_BlackFriday_register_image img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .LP_BlackFriday_register_header h2,
+    .LP_BlackFriday_BlocoConteudo h2,
+    .LP_BlackFriday_FAQ h2,
+    .LP_BlackFriday_tags h3 {
+        font-size: 17px;
+        font-weight: 600;
+        max-width: 240px;
+        line-height: 120%;
+    }
+
+    .LP_BlackFriday_Conteudos {
+        gap: 40px;
+    }
+
+    .LP_BlackFriday_BlocoConteudo img:nth-child(2) {
+        display: none;
+    }
+
+    .LP_BlackFriday_BlocoConteudo img:nth-child(3) {
+        display: block;
+    }
+
+    .LP_BlackFriday_FAQ_conteudo details summary h3,
+    .LP_BlackFriday_FAQ_conteudo details p,
+    .LP_BlackFriday_FAQ_conteudo details ul {
+        font-size: 16px;
+    }
+
+    .LP_BlackFriday_FAQ,
+    .LP_BlackFriday_tags {
+        padding: 16px;
+    }
+
+    .LP_BlackFriday_FAQ_conteudo {
+        padding: 0;
+    }
+
+    .LP_BlackFriday_FAQ_conteudo details[open] hr {
+        width: 100%;
+    }
+
+    .LP_BlackFriday_FAQ_conteudo details {
+        border-radius: 10px;
+        background: #232323;
+    }
+
+    .LP_BlackFriday_tags_grid {
+        width: 100%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
+    .LP_BlackFriday_tags_grid a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        line-height: 130%;
+    }
+
+    .LP_BlackFriday_fixed_bar_content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 16px;
+        transform: none;
+        gap: 8px;
+    }
+
+    .LP_BlackFriday_logo_wrapper,
+    .LP_BlackFriday_logo_wrapper img {
+        width: auto;
+    }
+
+    .LP_BlackFriday_logo_wrapper img {
+        max-width: 120px;
+    }
+
+    .LP_BlackFriday_logo {
+        display: none;
+    }
+
+    img.LP_BlackFriday_logo_mob {
+        display: block;
+    }
+
+    .LP_BlackFriday_scrolled .LP_BlackFriday_countdown {
+        width: 100%;
+        justify-content: center;
+        transform: scale(0.95);
+    }
+
+    .LP_BlackFriday_FAQ_conteudo details ul {
+        margin: 0;
+        padding: 16px 16px 0px 40px;
+    }
+
+    .LP_BlackFriday_scrolled .LP_BlackFriday_fixed_bar_content {
+        transform: scale(0.98);
+    }
+
+    .LP_BlackFriday_scrolled .LP_BlackFriday_countdown {
+        width: auto;
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE - MOBILE PEQUENO (480px)
+   ======================================== */
+
+@media screen and (max-width: 480px) {
+
+
+    .LP_BlackFriday_logo {
+        height: 30px;
+    }
+
+    .LP_BlackFriday_countdown {
+        width: 100%;
+        justify-content: center;
+        transform: scale(0.95);
+    }
+
+    .LP_BlackFriday_countdown_item {
+        min-width: 50px;
+    }
+
+    .LP_BlackFriday_banner_wrapper {
+        margin-top: 0;
+    }
+
+    .LP_BlackFriday_products_grid {
+        gap: 15px;
+    }
+
+    .LP_BlackFriday_section_title {
+        font-size: 20px;
+    }
+
+    .LP_BlackFriday_cta_btn {
+        font-size: 15px;
+        padding: 14px 35px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .LP_BlackFriday_register_emoji {
+        font-size: 100px;
+    }
+
+    .LP_BlackFriday_register_form_wrapper {
+        padding: 25px 20px;
+    }
+
+    .LP_BlackFriday_register_title {
+        font-size: 20px;
+    }
+
+    .LP_BlackFriday_checkbox_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .LP_BlackFriday_scrolled .LP_BlackFriday_fixed_bar_content {
+        transform: scale(0.8);
+    }
+}
+
+
+/* ========================================
+   PRODUTOS ESGOTADOS
+   ======================================== */
+
+.LP_BlackFriday_product_card.LP_BlackFriday_soldout {
+    position: relative;
+    opacity: 0.8; 
+}
+
+.LP_BlackFriday_product_card.LP_BlackFriday_soldout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.LP_BlackFriday_soldout_badge {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #000000;
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        z-index: 2;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 12px rgb(102 102 102 / 40%);
+        /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+        border: 1px solid white;
+}
+
+.LP_BlackFriday_product_card.LP_BlackFriday_soldout .LP_BlackFriday_product_btn {
+    background: #6e6e73;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.LP_BlackFriday_product_card.LP_BlackFriday_soldout .LP_BlackFriday_product_btn:hover {
+    background: #6e6e73;
+    transform: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .LP_BlackFriday_soldout_badge {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+        </style>
+
+
+    <section class="LP_BlackFriday_container">
+        <div class="LP_BlackFriday_fixed_bar">
+            <div class="LP_BlackFriday_fixed_bar_content">
+                <div class="LP_BlackFriday_logo_wrapper">
+                    <img src="/file/general/iplace-lp-aquece-black-031125-logo-da-black-faixa-do-topo.svg"
+                        alt="Black Friday iPlace" class="LP_BlackFriday_logo">
+                    <img src="/file/general/iplace-lp-aquece-black-031125-logo-da-black-faixa-do-topo-mob.svg"
+                        alt="Black Friday iPlace" class="LP_BlackFriday_logo_mob">
+                </div>
+    
+                <div class="LP_BlackFriday_countdown">
+                    <div class="LP_BlackFriday_countdown_item">
+                        <span class="LP_BlackFriday_countdown_number" id="LP_BlackFriday_days">00</span>
+                        <span class="LP_BlackFriday_countdown_label">dias</span>
+                    </div>
+                    <span class="LP_BlackFriday_countdown_separator">:</span>
+                    <div class="LP_BlackFriday_countdown_item">
+                        <span class="LP_BlackFriday_countdown_number" id="LP_BlackFriday_hours">00</span>
+                        <span class="LP_BlackFriday_countdown_label">horas</span>
+                    </div>
+                    <span class="LP_BlackFriday_countdown_separator">:</span>
+                    <div class="LP_BlackFriday_countdown_item">
+                        <span class="LP_BlackFriday_countdown_number" id="LP_BlackFriday_minutes">00</span>
+                        <span class="LP_BlackFriday_countdown_label">min</span>
+                    </div>
+                    <span class="LP_BlackFriday_countdown_separator">:</span>
+                    <div class="LP_BlackFriday_countdown_item">
+                        <span class="LP_BlackFriday_countdown_number" id="LP_BlackFriday_seconds">00</span>
+                        <span class="LP_BlackFriday_countdown_label">seg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="LP_BlackFriday_banner_wrapper">
+            <picture>
+                <source media="(max-width: 768px)" srcset="file/general/iplace-lp-aquece-black-031125-banner-topo-mob.png">
+                <img src="/file/general/iplace-lp-aquece-black-031125-banner-topo.png"
+                    alt="Black Friday iPlace - Aquece Black" class="LP_BlackFriday_banner_img">
+            </picture>
+        </div>
+    
+        <div class="LP_BlackFriday_offers_section">
+            <div class="LP_BlackFriday_content_wrapper">
+                <h1 class="LP_BlackFriday_section_title">Confira as ofertas antecipadas da Black!</h1>
+    
+                <div class="LP_BlackFriday_filters">
+                    <button class="LP_BlackFriday_filter_btn LP_BlackFriday_filter_active"
+                        data-filter="todos">Todos</button>
+                    <button class="LP_BlackFriday_filter_btn" data-filter="maior-desconto">Maior desconto</button>
+    
+                    <button class="LP_BlackFriday_filter_btn" data-filter="mac">Mac | até 45% OFF</button>
+                    <button class="LP_BlackFriday_filter_btn" data-filter="ipad">iPad | até 36% OFF</button>
+                    <button class="LP_BlackFriday_filter_btn" data-filter="watch">Watch | até 59% OFF</button>
+                    <button class="LP_BlackFriday_filter_btn" data-filter="logitech">Logitech | até 35% OFF</button>
+                    <button class="LP_BlackFriday_filter_btn" data-filter="originaisiplace">Acessórios | até 70%
+                        OFF</button>
+                    <button class="LP_BlackFriday_filter_btn" data-filter="audiojbl">JBL | até 42% OFF</button>
+                </div>
+    
+                <div class="LP_BlackFriday_products_grid" id="LP_BlackFriday_products_grid">
+                </div>
+    
+                <div class="LP_BlackFriday_cta_wrapper">
+                    <a href="https://www.iplace.com.br/ofertas/black-friday/cat2569834713" class="LP_BlackFriday_cta_btn"
+                        id="LP_BlackFriday_cta_btn">Veja todas as ofertas</a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="LP_BlackFriday_register_section">
+            <div class="LP_BlackFriday_content_wrapper">
+                <div class="LP_BlackFriday_register_grid">
+    
+                    <div class="LP_BlackFriday_register_image">
+                        <img src="/file/general/iplace-lp-aquece-black-031125-pre-black-cadastro.svg" alt="Black Friday"
+                            class="LP_BlackFriday_register_img">
+                    </div>
+    
+                    <div class="LP_BlackFriday_register_form_wrapper">
+                        <div class="LP_BlackFriday_register_header">
+                            <h2>Cadastre-se e receba as novas ofertas em primeira
+                                mão</h2>
+                        </div>
+    
+                        <div class="LP_BlackFriday_form_content" id="LP_BlackFriday_form_content">
+                            <form id="ProfileForm" action="https://link.iplace.com.br/u/register.php" method="POST"
+                                onsubmit="handleSubmit(event)">
+    
+                                <input type=hidden name="CID" value="1091660394">
+                                <input type=hidden name="SID" value="">
+                                <input type=hidden name="UID" value="">
+                                <input type=hidden name="f" value="1107">
+                                <input type=hidden name="p" value="2">
+                                <input type=hidden name="a" value="r">
+                                <input type=hidden name="el" value="">
+                                <input type=hidden name="llid" value="">
+                                <input type=hidden name="c" value="">
+                                <input type=hidden name="counted" value="">
+                                <input type=hidden name="RID" value="">
+                                <input type=hidden name="mailnow" value="">
+    
+                                <div class="LP_BlackFriday_checkbox_section">
+                                    <p>Quero receber ofertas de:</p>
+    
+                                    <div class="LP_BlackFriday_checkbox_grid">
+                                        <label for="FiP_iPhone" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_iPhone" name="interest[]" value="3">
+                                            <span>iPhone</span>
+                                        </label>
+    
+                                        <label for="FiP_AppleWatch" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_AppleWatch" name="interest[]" value="4">
+                                            <span>Apple Watch</span>
+                                        </label>
+    
+                                        <label for="FiP_iPad" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_iPad" name="interest[]" value="2">
+                                            <span>iPad</span>
+                                        </label>
+    
+                                        <label for="FiP_AirPods" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_AirPods" name="interest[]" value="7">
+                                            <span>AirPods</span>
+                                        </label>
+    
+                                        <label for="FiP_Mac" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_Mac" name="interest[]" value="1">
+                                            <span>Mac</span>
+                                        </label>
+    
+                                        <label for="FiP_Audio" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_Audio" name="interest[]" value="5">
+                                            <span>Áudio</span>
+                                        </label>
+    
+                                        <label for="FiP_Acessorios" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_Acessorios" name="interest[]" value="6">
+                                            <span>Acessórios</span>
+                                        </label>
+    
+                                        <label for="FiP_Seminovos" class="LP_BlackFriday_checkbox_option">
+                                            <input type="checkbox" id="FiP_Seminovos" name="interest[]" value="34">
+                                            <span>Seminovos</span>
+                                        </label>
+                                    </div>
+                                </div>
+    
+    
+    
+    
+                                <p>Preencha seus dados</p>
+                                <div class="LP_BlackFriday_dadospessoais_section">
+    
+                                    <div class="LP_BlackFriday_form_row">
+    
+                                        <input type="text" id="inp_1" name="inp_1" placeholder="Nome" required>
+                                        <input type="text" id="inp_2" name="inp_2" placeholder="Sobrenome" required>
+    
+                                    </div>
+    
+                                    <div class="LP_BlackFriday_form_group">
+                                        <input type="email" id="inp_3" name="inp_3" placeholder="E-mail" required>
+                                    </div>
+    
+                                    <div class="LP_BlackFriday_form_group">
+                                        <input type="tel" id="inp_37" name="inp_37" placeholder="DDD + Telefone"
+                                            maxlength="15" required>
+                                        <p class="LP_BlackFriday_error_message" id="phoneError"></p>
+    
+                                        <button type="submit" class="LP_BlackFriday_submit_btn">Enviar</button>
+                                    </div>
+    
+    
+                                </div>
+    
+    
+                            </form>
+                        </div>
+    
+                        <div class="LP_BlackFriday_success_message" id="LP_BlackFriday_successMessage">
+                            <div class="LP_BlackFriday_success_icon">✓</div>
+                            <h3 class="LP_BlackFriday_success_title">Cadastro Realizado com Sucesso!</h3>
+                            <p class="LP_BlackFriday_success_text">
+                                Você está dentro! Em breve você receberá acesso antecipado às melhores ofertas da Black
+                                Friday
+                                iPlace.
+                            </p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <div class="LP_BlackFriday_Conteudos">
+            <div class="LP_BlackFriday_BlocoConteudo">
+                <h2>Formas de pagamento. Escolha a ideal pra você.</h2>
+                <img src="/file/general/iplace-lp-aquece-black-031125-formas-de-pagamento-desk.png">
+                <img src="/file/general/iplace-lp-aquece-black-031125-formas-de-pagamento-mob.png">
+            </div>
+    
+            <div class="LP_BlackFriday_BlocoConteudo">
+                <h2>Benefícios que fazem a diferença</h2>
+                <img src="/file/general/iplace-lp-aquece-black-031125-beneficios-desk.png">
+                <img src="/file/general/iplace-lp-aquece-black-031125-beneficios-mob.png">
+            </div>
+    
+    
+    
+            <section class="LP_BlackFriday_FAQ">
+                <h2>Dúvidas Frequentes sobre a Black Friday 2025</h2>
+                <div class="LP_BlackFriday_FAQ_conteudo">
+    
+                    <details>
+                        <summary>
+                            <h3>Quando é a Black Friday 2025?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p>A Black Friday 2025 será no dia 28 de novembro. Mas, na iPlace, o mês inteiro será recheado
+                            de
+                            surpresas e
+                            oportunidades para economizar na compra do seu Apple e acessórios originais.</p>
+                        <p>Como a maior loja de produtos Apple do Brasil, preparamos ofertas especiais no site e em
+                            nossas
+                            lojas físicas,
+                            com descontos em diversas linhas de produtos, como MacBook, iPad, iPhone, Apple Watch,
+                            acessórios JBL e muito
+                            mais.</p>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Como aproveitar ao máximo a Black Friday iPlace?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p><strong>1 – Cadastre-se no site</strong><br>
+                            Cadastre-se nesta página e seja o primeiro a saber sobre ofertas e descontos exclusivos da
+                            Black
+                            Friday.</p>
+                        <p><strong>2 – Pesquise com antecedência</strong><br>
+                            Essencial para ter uma melhor experiência de compra. Assim, você entende os diferenciais de
+                            cada
+                            produto, define
+                            com segurança qual deseja adquirir e consegue tomar decisões mais rápidas, garantindo as
+                            melhores ofertas antes
+                            que o estoque acabe.</p>
+                        <p><strong>3 – Planeje o método de pagamento</strong><br>
+                            Cartão de crédito e PIX possuem limites que podem afetar suas compras. Para aproveitar as
+                            promoções da Black
+                            Friday sem imprevistos, verifique seu limite com antecedência, solicite liberação ou aumento
+                            junto ao seu banco
+                            e fique atento a possíveis restrições de valor por horário de transação.</p>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Como encontrar as melhores ofertas na Black Friday?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p>Para encontrar as melhores ofertas, é importante pesquisar com antecedência, organizar uma
+                            lista
+                            de desejos,
+                            cadastrar-se nas newsletters, seguir as redes sociais das lojas e ficar atento às promoções
+                            antecipadas.</p>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Como escolher seu iPhone na Black Friday?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <ul>
+                            <li><strong>iPhone 17 Black na Friday:</strong> é o mais novo da linha, então deve ter
+                                descontos
+                                sutis, ideal
+                                para quem quer o modelo mais atual, com chip A18 e câmera avançada.</li>
+                            <li><strong>iPhone 16 Black na Friday:</strong> esperado como o melhor custo-benefício de
+                                2025.
+                            </li>
+                            <li><strong>iPhone 15 Black na Friday:</strong> o modelo mantém o design moderno e boas
+                                câmeras,
+                                e já aparece
+                                com descontos maiores.</li>
+                            <li><strong>iPhone 14 Black na Friday:</strong> ideal para quem quer um iPhone completo com
+                                bom
+                                preço, sem
+                                precisar dos recursos mais recentes.</li>
+                        </ul>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Como escolher seu Apple Watch na Black Friday?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <ul>
+                            <li><strong>Apple Watch Ultra na Black Friday:</strong> focado em desempenho e resistência
+                                extrema. Indicado
+                                para esportistas e aventureiros.</li>
+                            <li><strong>Apple Watch SE na Black Friday:</strong> melhor custo-benefício da linha. Leve,
+                                funcional e com
+                                sensores essenciais de saúde.</li>
+                            <li><strong>Apple Watch Series 11 na Black Friday:</strong> une performance de ponta com
+                                recursos de saúde
+                                avançados.</li>
+                            <li><strong>Apple Watch Series 10 na Black Friday:</strong> ótima alternativa com preço mais
+                                acessível, com
+                                experiência completa.</li>
+                        </ul>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Como escolher seu MacBook na Black Friday?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p>Se você busca desempenho, durabilidade e design premium, a Black Friday é o momento ideal
+                            para
+                            investir em um
+                            MacBook.</p>
+                        <ul>
+                            <li><strong>MacBook Air na Black Friday:</strong> portátil, leve e com bateria de longa
+                                duração.
+                                Ideal para quem
+                                deseja mobilidade.</li>
+                            <li><strong>MacBook Pro na Black Friday:</strong> indicado para quem trabalha com edição,
+                                design
+                                e programação.
+                                Alta performance, tela superior e longa vida útil.</li>
+                        </ul>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Como escolher seu iPad na Black Friday?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p>O iPad é um dos dispositivos mais versáteis da Apple, perfeito para estudos, trabalho e
+                            entretenimento.</p>
+                        <ul>
+                            <li><strong>iPad Pro Black na Friday:</strong> o mais potente da linha, ideal para designers
+                                e
+                                criadores.</li>
+                            <li><strong>iPad Air Black na Friday:</strong> equilíbrio perfeito entre performance e
+                                preço.
+                                Modelo leve,
+                                potente e ótimo para produtividade.</li>
+                            <li><strong>iPad Mini na Black Friday:</strong> compacto, prático e poderoso. Ideal para
+                                quem
+                                busca
+                                portabilidade sem abrir mão da performance.</li>
+                            <li><strong>iPad Black na Friday:</strong> opção ideal para uso cotidiano, estudos e consumo
+                                de
+                                conteúdo.</li>
+                        </ul>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Com quem posso falar para tirar minhas dúvidas?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p>Nosso time de especialistas está disponível para lhe auxiliar com qualquer dúvida sobre os
+                            produtos, pedidos,
+                            eventuais problemas ou o que precisar! Entre em contato em um dos nossos canais de
+                            atendimento.
+                            <a href="https://api.whatsapp.com/send/?phone=555123242200&text=Gostaria%20de%20um%20atendimento%20pelo%20Whatsapp!&type=phone_number&app_absent=0"
+                                target="_blank">Clique aqui</a>.
+                        </p>
+                    </details>
+    
+                    <details>
+                        <summary>
+                            <h3>Qual é a diferença entre a Black Friday e a Cyber Monday?</h3>
+                            <img src="/file/general/iplace-lp-aquece-black-031125-icone-faq-mais.svg">
+                        </summary>
+                        <hr>
+                        <p>A Black Friday é focada em ofertas tanto em lojas físicas quanto online e ocorre na última
+                            sexta-feira de
+                            novembro. A Cyber Monday acontece na segunda-feira seguinte e é principalmente voltada para
+                            promoções online.
+                        </p>
+                    </details>
+                </div>
+            </section>
+    
+            <section class="LP_BlackFriday_tags">
+                <h3>Pesquisas frequentes</h3>
+                <div class="LP_BlackFriday_tags_grid">
+                    <a href="https://www.iplace.com.br/black-friday">Black Friday 2025</a>
+                    <a href="https://www.iplace.com.br/black-friday">Black Friday Apple</a>
+                    <a href="https://www.iplace.com.br/black-friday">Black Friday iPhone</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-16/cat266381400">iPhone 16 Black Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-16/iphone-16-plus/cat266381402">iPhone 16 Plus Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-16/iphone-16-pro/cat266381403">iPhone 16 Pro Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-16/iphone-16-pro-max/cat266381404">iPhone 16 Pro Max Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-15/cat266380438">iPhone 15 Black Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-15/iphone-15-plus/cat266380441">iPhone 15 Plus Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-15/iphone-15-pro/cat266380442">iPhone 15 Pro Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-15/iphone-15-pro-max/cat266380443">iPhone 15 Pro Max Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-14/cat266380388">iPhone 14 Black Friday</a>
+                    <a href="https://www.iplace.com.br/iphone-14/iphone-14-plus/cat266380392">iPhone 14 Plus Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-13/cat266380396">iPhone 13 Black Friday</a>
+                    <a href="https://www.iplace.com.br/ofertas/usados/cat211480338">iPhone usado Black Friday</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-12/cat266380357">iPhone 12 Black Friday</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-se/cat53041414">iPhone SE Black Friday</a>
+                    <a href="https://www.iplace.com.br/iphone/iphone-11/cat173360034">iPhone 11 Black Friday</a>
+                    <a href="https://www.iplace.com.br/iplace/apple-watch/cat43200402">Apple Watch Black Friday</a>
+                    <a href="https://www.iplace.com.br/apple-watch/apple-watch-se/cat266380360">Apple Watch SE Black
+                        Friday</a>
+                    <a href="https://www.iplace.com.br/iplace/ipad/cat1300009">iPad Black Friday</a>
+                    <a href="https://www.iplace.com.br/ipad/novo-ipad-pro/cat115301690">iPad Pro Black Friday</a>
+                    <a href="https://www.iplace.com.br/ipad/ipad-air/cat266380362">iPad Air Black Friday</a>
+                    <a href="https://www.iplace.com.br/iplace/mac/cat1390012">Black Friday Macbook</a>
+                    <a href="https://www.iplace.com.br/mac/macbook-air/cat1390010">Black Friday Macbook Air</a>
+                    <a href="https://www.iplace.com.br/mac/macbook-pro/cat152850284">Black Friday Macbook Pro</a>
+                    <a href="https://www.iplace.com.br/audio/jbl/cat266380380">Black Friday Caixa de Som JBL</a>
+                    <a href="https://www.iplace.com.br/audio/caixas-de-som/cat1340033">Black Friday Caixa de Som
+                        Bluetooth</a>
+                    <a href="https://www.iplace.com.br/audio/fone-in-ear/cat120740545">Black Friday Fone de Ouvido</a>
+                    <a href="https://www.iplace.com.br/airpods/airpods-pro/cat266380418">Black Friday AirPods Pro</a>
+                    <a href="https://www.iplace.com.br/audio/airpods/cat120740546">AirPods Black Friday</a>
+                    <a href="https://www.iplace.com.br/acessorios-diversos/carregadores/cat96240366">Carregadores Black
+                        Friday</a>
+                </div>
+            </section>
+    
+        </div>
+    
+    
+    
+    </section>
+ 
+
+        <script>
+            
+                // ===== SISTEMA DE POSICIONAMENTO DINÂMICO DA BARRA FIXA + BANNER =====
+                (function () {
+                    const fixedBar = document.querySelector('.LP_BlackFriday_fixed_bar');
+                    const banner = document.querySelector('.LP_BlackFriday_banner_wrapper');
+
+                    if (!fixedBar) return;
+
+                    let isScrolled = false;
+
+                    // Função para detectar a altura do header do site
+                    function getHeaderHeight() {
+                        const header = document.querySelector('.header-wrapper'); // ← Seu seletor aqui
+
+                        if (header) {
+                            return header.offsetHeight;
+                        }
+                        return 0;
+                    }
+
+                    // Função para atualizar tudo
+                    function updateAll() {
+                        const headerHeight = getHeaderHeight();
+                        const scrollY = window.scrollY || window.pageYOffset;
+
+                        // Atualiza posição da barra fixa
+                        fixedBar.style.top = headerHeight + 'px';
+
+                        // Adiciona/remove classe de scroll
+                        if (scrollY > 100 && !isScrolled) {
+                            isScrolled = true;
+                            fixedBar.classList.add('LP_BlackFriday_scrolled');
+                        } else if (scrollY <= 100 && isScrolled) {
+                            isScrolled = false;
+                            fixedBar.classList.remove('LP_BlackFriday_scrolled');
+                        }
+
+                        // Ajusta margem do banner (se existir)
+                        if (banner) {
+                            const fixedBarHeight = fixedBar.offsetHeight;
+                            banner.style.marginTop = fixedBarHeight + 'px';  // ← Apenas esta linha
+                        }
+                    }
+
+                    // Executa na inicialização
+                    updateAll();
+
+                    // Executa durante o scroll
+                    window.addEventListener('scroll', function () {
+                        updateAll();
+                    }, { passive: true });
+
+                    // Executa ao redimensionar
+                    let resizeTimeout;
+                    window.addEventListener('resize', function () {
+                        clearTimeout(resizeTimeout);
+                        resizeTimeout = setTimeout(updateAll, 50);
+                    });
+
+                    // Observa mudanças no DOM
+                    if ('MutationObserver' in window) {
+                        const observer = new MutationObserver(function () {
+                            updateAll();
+                        });
+
+                        const header = document.querySelector('header') || document.body;
+                        observer.observe(header, {
+                            attributes: true,
+                            attributeFilter: ['class', 'style'],
+                            childList: true,
+                            subtree: true
+                        });
+                    }
+
+                    // Observa mudanças no tamanho da barra fixa
+                    if ('ResizeObserver' in window) {
+                        const resizeObserver = new ResizeObserver(function () {
+                            updateAll();
+                        });
+                        resizeObserver.observe(fixedBar);
+                    }
+
+                    // Atualização contínua para máxima precisão
+                    function smoothUpdate() {
+                        updateAll();
+                        requestAnimationFrame(smoothUpdate);
+                    }
+                    requestAnimationFrame(smoothUpdate);
+                })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* ========================================
+                   COUNTDOWN BLACK FRIDAY - IPLACE
+                   ======================================== */
+
+                (function () {
+                    'use strict';
+
+                    /* Data final da Black Friday - Ajuste conforme necessário */
+                    const LP_BlackFriday_endDate = new Date('2026-11-29T23:59:00').getTime();
+
+                    /* Elementos do DOM */
+                    const LP_BlackFriday_daysElement = document.getElementById('LP_BlackFriday_days');
+                    const LP_BlackFriday_hoursElement = document.getElementById('LP_BlackFriday_hours');
+                    const LP_BlackFriday_minutesElement = document.getElementById('LP_BlackFriday_minutes');
+                    const LP_BlackFriday_secondsElement = document.getElementById('LP_BlackFriday_seconds');
+
+                    /* Função para adicionar zero à esquerda */
+                    function LP_BlackFriday_addZero(num) {
+                        return num < 10 ? '0' + num : num;
+                    }
+
+                    /* Função para atualizar o countdown */
+                    function LP_BlackFriday_updateCountdown() {
+                        const now = new Date().getTime();
+                        const distance = LP_BlackFriday_endDate - now;
+
+                        /* Se o countdown terminou */
+                        if (distance < 0) {
+                            LP_BlackFriday_daysElement.textContent = '00';
+                            LP_BlackFriday_hoursElement.textContent = '00';
+                            LP_BlackFriday_minutesElement.textContent = '00';
+                            LP_BlackFriday_secondsElement.textContent = '00';
+                            clearInterval(LP_BlackFriday_countdownInterval);
+                            return;
+                        }
+
+                        /* Cálculos de tempo */
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        /* Atualiza os elementos */
+                        LP_BlackFriday_daysElement.textContent = LP_BlackFriday_addZero(days);
+                        LP_BlackFriday_hoursElement.textContent = LP_BlackFriday_addZero(hours);
+                        LP_BlackFriday_minutesElement.textContent = LP_BlackFriday_addZero(minutes);
+                        LP_BlackFriday_secondsElement.textContent = LP_BlackFriday_addZero(seconds);
+                    }
+
+                    /* Inicializa o countdown imediatamente */
+                    LP_BlackFriday_updateCountdown();
+
+                    /* Atualiza o countdown a cada segundo */
+                    var LP_BlackFriday_countdownInterval = setInterval(LP_BlackFriday_updateCountdown, 1000);
+
+                })();
+
+
+
+
+
+
+                /* ========================================
+                   SISTEMA DE PRODUTOS E FILTROS - BLACK FRIDAY
+                   ======================================== */
+
+                /* ==========================================
+                   CONFIGURAÇÃO DOS PRODUTOS
+                   ==========================================
+                   
+                   Para adicionar/editar produtos, modifique o array abaixo.
+                   
+                   Estrutura de cada produto:
+                   {
+                     id: número único,
+                     brand: "Marca do produto",
+                     name: "Nome do produto",
+                     category: "categoria-do-filtro", // deve corresponder ao data-filter dos botões
+                     image: "placeholder-imgs.svg", // caminho da imagem
+                     priceOld: "R$ 999", // preço antigo (opcional)
+                     priceCurrent: "R$ 410", // preço atual
+                     priceInstallment: "no Pix", // texto complementar do preço
+                     priceDetail: "ou até 21x de R$ 999", // parcelamento (opcional)
+                     discount: "-25%", // porcentagem de desconto
+                     link: "#" // link do produto
+                   }
+                */
+
+
+                /*,
+                soldOut: true  // ← ADICIONE ESTA LINHA para produtos esgotados*/
+
+                const LP_BlackFriday_products = [
+                    /* 227912 - 70% */
+                    {
+                        id: 21,
+                        brand: "Originais iPlace",
+                        name: "Carregador Veicular Turbo 30W, 2 saídas",
+                        category: "originaisiplace",
+                        image: "/file/general/iplace-imgs-aquece-031125-21.png",
+                        priceOld: "R$ 199,00",
+                        priceCurrent: "R$ 59",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-70%",
+                        link: "https://www.iplace.com.br/carregador-veicular-original-iplace-30w-227912/227912"
+                    },
+                    /* 100065952 */
+                    {
+                        id: 22,
+                        brand: "Originais iPlace",
+                        name: "Conjunto 2 Smart Tag",
+                        category: "originaisiplace",
+                        image: "/file/general/iplace-imgs-aquece-031125-22.png",
+                        priceOld: "R$ 539,00",
+                        priceCurrent: "R$ 199",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-63%",
+                        link: "https://www.iplace.com.br/conjunto-2-smart-tag-cinza-originais-iplace/100065952"
+                    },
+                    /* 224353 */
+                    {
+                        id: 24,
+                        brand: "Originais iPlace",
+                        name: "Fone de Ouvido We.Duo Gamer X220",
+                        category: "originaisiplace",
+                        image: "/file/general/iplace-imgs-aquece-031125-24.png",
+                        priceOld: "R$ 399,00",
+                        priceCurrent: "R$ 199",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-50%",
+                        link: "https://www.iplace.com.br/fone-de-ouvido-we-duo-gamer-x220-originais-iplace-branco/224353"
+                    },
+                    /* 227491 */
+                    {
+                        id: 12,
+                        brand: "Logitech",
+                        name: "Mouse sem fio Pebble 2 M350s",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-12.png",
+                        priceOld: "R$ 123,90",
+                        priceCurrent: "R$ 89",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-28%",
+                        link: "https://www.iplace.com.br/mouse-logitech-pebble-2-m350s-grafite/227491"
+                    },
+                    /* 227494 - primeira ocorrência */
+                    {
+                        id: 15,
+                        brand: "Logitech",
+                        name: "Teclado sem fio Pebble Keys 2 K380s",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-15.png",
+                        priceOld: "R$ 247,90",
+                        priceCurrent: "R$ 169",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-32%",
+                        link: "https://www.iplace.com.br/teclado-pebble-keys-2-k380s-bluetooth-branco/227494"
+                    },
+                    /* 100051820 */
+                    {
+                        id: 39,
+                        brand: "Apple",
+                        name: "Watch SE GPS, 40mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-111125-02.png",
+                        priceOld: "R$ 3.299,00",
+                        priceCurrent: "R$ 1.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-42%",
+                        link: "https://www.iplace.com.br/apple-watch-se-gps-caixa-prateada-aluminio-40mm-pulseira-loop-esportiva-nuvem-azul-mxee3be-a/100051820"
+                    },
+
+                    /* 100051764 */
+                    {
+                        id: 38,
+                        brand: "Apple",
+                        name: "iPhone 16 Pro Max 1TB",
+                        category: "iphone",
+                        image: "/file/general/iplace-imgs-aquece-111125-01.png",
+                        priceOld: "R$ 15.499,00",
+                        priceCurrent: "R$ 10.799",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-30%",
+                        link: "https://www.iplace.com.br/iphone-16-pro-max-1tb-titanio-branco-myx53be-a/100051764"
+                    },
+
+                    /* 100051868 */
+                    {
+                        id: 10,
+                        brand: "Apple",
+                        name: "Watch Series 10 GPS, 42mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-031125-10.png",
+                        priceOld: "R$ 5.499,00",
+                        priceCurrent: "R$ 3.599",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-35%",
+                        link: "https://www.iplace.com.br/apple-watch-series-10-gps-caixa-preta-brilhante-aluminio-42mm-pulseira-loop-esportiva-tinto-mwwg3am-a/100051868"
+                    },
+                    /* 229473 */
+                    {
+                        id: 29,
+                        brand: "JBL",
+                        name: "Fone Bluetooth Endurance Race TWS",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-031125-29.png",
+                        priceOld: "R$ 599,00",
+                        priceCurrent: "R$ 389",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-35%",
+                        link: "https://www.iplace.com.br/fone-ouvido-jbl-inear-endurrance-race-tws-coral/229473"
+                    },
+                    /* 100055413 */
+                    {
+                        id: 1,
+                        brand: "Apple",
+                        name: 'MacBook Air 13" M3, 16GB, 256GB',
+                        category: "mac",
+                        image: "/file/general/iplace-imgs-aquece-031125-01.png",
+                        priceOld: "R$ 13.999,00",
+                        priceCurrent: "R$ 9.199",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-34%",
+                        link: "https://www.iplace.com.br/macbook-pro-apple-13-m3-cpu-8-nucleos-gpu-8-nucleos-16gb-ram-256gb-ssd-meia-noite-mc8k4bz-a/100055413"
+                    },
+                    /* 228100 */
+                    {
+                        id: 34,
+                        brand: "JBL",
+                        name: "JBL Boombox 3, Caixa de Som Bluetooth",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-041125-05.png",
+                        priceOld: "R$ 2.999,00",
+                        priceCurrent: "R$ 1.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-37%",
+                        link: "https://www.iplace.com.br/caixa-de-som-jbl-boombox-3-bluetooth-preto/228100"
+                    },
+                    /* 229237 */
+                    {
+                        id: 30,
+                        brand: "JBL",
+                        name: "Caixa de Som Bluetooth Xtreme 4",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-031125-30.png",
+                        priceOld: "R$ 2.029,00",
+                        priceCurrent: "R$ 1.499",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-26%",
+                        link: "https://www.iplace.com.br/caixa-som-jbl-xtreme-4-bluetooth-preto/229237"
+                    },
+                    /* 100051803 */
+                    {
+                        id: 42,
+                        brand: "Apple",
+                        name: "Watch Ultra 2 GPS + Cellular, 49mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-031125-08.png",
+                        priceOld: "R$ 10.499,00",
+                        priceCurrent: "R$ 7.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-25%",
+                        link: "https://www.iplace.com.br/apple-watch-ultra-gps-cellular-caixa-preta-titanio-49mm-pulseira-loop-alpina-verde-escura-p-mx4q3be-a/100051803"
+                    },
+                    /* 100055412 */
+                    {
+                        id: 3,
+                        brand: "Apple",
+                        name: 'MacBook Air 13" M3, 24GB, 512GB',
+                        category: "mac",
+                        image: "/file/general/iplace-imgs-aquece-031125-03.png",
+                        priceOld: "R$ 18.799,00",
+                        priceCurrent: "R$ 10.389",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-45%",
+                        link: "https://www.iplace.com.br/macbook-pro-apple-13-m3-cpu-8-nucleos-gpu-8-nucleos-26gb-ram-512gb-ssd-estelar-mc8p4bz-a/100055412"
+                    },
+                    /* 230261 */
+                    {
+                        id: 43,
+                        brand: "Apple",
+                        name: 'iPad Pro 11" M4, Wi-Fi, 512GB',
+                        category: "ipad",
+                        image: "/file/general/iplace-imgs-aquece-031125-04.png",
+                        priceOld: "R$ 15.399,00",
+                        priceCurrent: "R$ 9.819",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-36%",
+                        link: "https://www.iplace.com.br/ipad-pro-11-m4-wifi-512gb-preto-espacial-mvvc3bz-a/230261"
+                    },
+                    /* 100055409 */
+                    {
+                        id: 2,
+                        brand: "Apple",
+                        name: 'MacBook Air 13" M3, 16GB, 256GB',
+                        category: "mac",
+                        image: "/file/general/iplace-imgs-aquece-031125-02.png",
+                        priceOld: "R$ 13.999,00",
+                        priceCurrent: "R$ 9.199",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-34%",
+                        link: "https://www.iplace.com.br/macbook-air-apple-13-m3-cpu-8-nucleos-gpu-8-nucleos-16gb-ram-256gb-ssd-cinza-espacial-mc8g4bz-a/100055409"
+                    },
+                    /* 100051878 */
+                    {
+                        id: 36,
+                        brand: "Apple",
+                        name: "Watch Series 10 GPS, Alumínio 46mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-041125-02.png",
+                        priceOld: "R$ 5.899,00",
+                        priceCurrent: "R$ 3.799",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-36%",
+                        link: "https://www.iplace.com.br/apple-watch-series-10-gps-caixa-ouro-rosa-aluminio-pulseira-esportiva-blush-clara-mwwt3am-a/100051878"
+                    },
+                    /* 100051864 */
+                    {
+                        id: 9,
+                        brand: "Apple",
+                        name: "Watch Series 10 GPS, 42mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-031125-09.png",
+                        priceOld: "R$ 5.499,00",
+                        priceCurrent: "R$ 3.599",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-35%",
+                        link: "https://www.iplace.com.br/apple-watch-series-10-gps-caixa-prateada-aluminio-pulseira-esportiva-denim-mwwc3am-a/100051864"
+                    },
+                    /* 231151 */
+                    {
+                        id: 32,
+                        brand: "JBL",
+                        name: "Fone Bluetooth Live Beam 3",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-031125-32.png",
+                        priceOld: "R$ 1.099,00",
+                        priceCurrent: "R$ 779",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-29%",
+                        link: "https://www.iplace.com.br/fone-ouvido-jbl-live-beam-3-prata/231151"
+                    },
+                    /* 229074 */
+                    {
+                        id: 19,
+                        brand: "Logitech",
+                        name: "Teclado Ergonômico Wave Keys",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-19.png",
+                        priceOld: "R$ 479,90",
+                        priceCurrent: "R$ 379",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-21%",
+                        link: "https://www.iplace.com.br/teclado-ergonomico-logitech-bluetooth-compacto-wave-keys-grafite/229074"
+                    },
+                    /* 100052095 */
+                    {
+                        id: 37,
+                        brand: "Apple",
+                        name: "Watch Series 10 GPS + Cellular, Alumínio 42mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-041125-03.png",
+                        priceOld: "R$ 6.799,00",
+                        priceCurrent: "R$ 3.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-43%",
+                        link: "https://www.iplace.com.br/apple-watch-series-10-gps-cellular-caixa-prateada-aluminio-42mm-pulseira-loop-esportiva-nuvem-azul-mwx53am-a/100052095"
+                    },
+                    /* 224390 */
+                    {
+                        id: 17,
+                        brand: "Logitech",
+                        name: "Mouse Pad Desk Mat Studio Series",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-17.png",
+                        priceOld: "R$ 142,90",
+                        priceCurrent: "R$ 99",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-31%",
+                        link: "https://www.iplace.com.br/mousepad-desk-mat-logitech-grafite-956-000047/224390"
+                    },
+                    /* 227494 - segunda ocorrência (id 14 grafite) */
+                    {
+                        id: 14,
+                        brand: "Logitech",
+                        name: "Teclado sem fio Pebble Keys 2 K380s",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-14.png",
+                        priceOld: "R$ 247,90",
+                        priceCurrent: "R$ 169",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-32%",
+                        link: "https://www.iplace.com.br/teclado-pebble-keys-2-k380s-bluetooth-grafite/227495"
+                    },
+                    /* 230224 */
+                    {
+                        id: 6,
+                        brand: "Apple",
+                        name: 'iPad Air 11" M2, Wi-Fi + Cellular, 1TB',
+                        category: "ipad",
+                        image: "/file/general/iplace-imgs-aquece-031125-06.png",
+                        priceOld: "R$ 14.599,00",
+                        priceCurrent: "R$ 9.999",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-32%",
+                        link: "https://www.iplace.com.br/ipad-air-11-polegadas-wifi-cell-1tb-azul-m2-muxt3bz-a/230224"
+                    },
+                    /* 230257 */
+                    {
+                        id: 7,
+                        brand: "Apple",
+                        name: 'iPad Air 13" M2, Wi-Fi + Cellular, 1TB',
+                        category: "ipad",
+                        image: "/file/general/iplace-imgs-aquece-031125-07.png",
+                        priceOld: "R$ 17.099,00",
+                        priceCurrent: "R$ 11.599",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-32%",
+                        link: "https://www.iplace.com.br/ipad-air-13polegadas-wifi-1tb-estelar-mv763bz-a/230257"
+                    },
+                    /* 230512 */
+                    {
+                        id: 25,
+                        brand: "Originais iPlace",
+                        name: "Capa iPhone 16 Plus Air Cushion Essential",
+                        category: "originaisiplace",
+                        image: "/file/general/iplace-imgs-aquece-031125-25.png",
+                        priceOld: "R$ 154,90",
+                        priceCurrent: "R$ 69",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-55%",
+                        link: "https://www.iplace.com.br/capa-iphone-16-plus-transparente-air-cushion-originais-iplace/230512"
+                    },
+                    /* 230459 */
+                    {
+                        id: 26,
+                        brand: "Originais iPlace",
+                        name: "Película iPhone 16 Plus Antibactéria",
+                        category: "originaisiplace",
+                        image: "/file/general/iplace-imgs-aquece-031125-26.png",
+                        priceOld: "R$ 154,00",
+                        priceCurrent: "R$ 69",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-55%",
+                        link: "https://www.iplace.com.br/pelicula-antibacteria-iphone-16-plus-originais-iplace/230459"
+                    },
+                    /* 227494 - terceira ocorrência (id 16 rosa) */
+                    {
+                        id: 16,
+                        brand: "Logitech",
+                        name: "Teclado sem fio Pebble Keys 2 K380s",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-16.png",
+                        priceOld: "R$ 247,90",
+                        priceCurrent: "R$ 169",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-32%",
+                        link: "https://www.iplace.com.br/teclado-pebble-keys-2-k380s-bluetooth-branco/227494"
+                    },
+                    /* 227492 */
+                    {
+                        id: 11,
+                        brand: "Logitech",
+                        name: "Mouse sem fio Pebble 2 M350s",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-11.png",
+                        priceOld: "R$ 123,90",
+                        priceCurrent: "R$ 89",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-28%",
+                        link: "https://www.iplace.com.br/mouse-logitech-pebble-2-m350s-branco/227492"
+                    },
+                    /* 230181 */
+                    {
+                        id: 31,
+                        brand: "JBL",
+                        name: "Headset Gamer Quantum 910 Wireless",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-031125-31.png",
+                        priceOld: "R$ 1.699,00",
+                        priceCurrent: "R$ 1.399",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-18%",
+                        link: "https://www.iplace.com.br/fone-de-ouvido-jbl-over-ear-quantum-910-wireless-preto/230181"
+                    },
+                    /* 227569 */
+                    {
+                        id: 33,
+                        brand: "JBL",
+                        name: "Caixa de Som Bluetooth Authentics 300",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-031125-33.png",
+                        priceOld: "R$ 3.299,00",
+                        priceCurrent: "R$ 1.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-42%",
+                        link: "https://www.iplace.com.br/caixa-de-som-jbl-authentics-300-bluethooth-preto-28913719/227569"
+                    },
+                    /* 227493 */
+                    {
+                        id: 13,
+                        brand: "Logitech",
+                        name: "Mouse sem fio Pebble 2 M350s",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-13.png",
+                        priceOld: "R$ 123,90",
+                        priceCurrent: "R$ 89",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-28%",
+                        link: "https://www.iplace.com.br/mouse-logitech-pebble-2-m350s-rosa/227493"
+                    },
+                    /* 231043 */
+                    {
+                        id: 18,
+                        brand: "Logitech",
+                        name: "Teclado MX Keys S, Iluminação Inteligente",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-18.png",
+                        priceOld: "R$ 899,90",
+                        priceCurrent: "R$ 699",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-22%",
+                        link: "https://www.iplace.com.br/teclado-logitech-cinza-mxkeys-s/231043"
+                    },
+                    /* 230462 */
+                    {
+                        id: 27,
+                        brand: "Originais iPlace",
+                        name: "Película Privacidade iPhone 16 Plus",
+                        category: "originaisiplace",
+                        image: "/file/general/iplace-imgs-aquece-031125-27.png",
+                        priceOld: "R$ 154,00",
+                        priceCurrent: "R$ 69",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-55%",
+                        link: "https://www.iplace.com.br/pelicula-privacidade-iphone-16-plus-originais-iplace/230462"
+                    },
+                    /* 215883 */
+                    {
+                        id: 28,
+                        brand: "JBL",
+                        name: "Fone de Ouvido com Fio C50HI",
+                        category: "audiojbl",
+                        image: "/file/general/iplace-imgs-aquece-031125-28.png",
+                        priceOld: "R$ 59,00",
+                        priceCurrent: "R$ 39",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-34%",
+                        link: "https://www.iplace.com.br/fone-jbl-c50hi-preto/215883"
+                    },
+
+                    /* PRODUTOS NÃO INCLUÍDOS NA LISTA DE REORDENAÇÃO */
+                    /* 100051805 */
+                    {
+                        id: 8,
+                        brand: "Apple",
+                        name: "Watch Ultra 2 GPS + Cellular, 49mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-031125-08.png",
+                        priceOld: "R$ 10.499,00",
+                        priceCurrent: "R$ 7.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-25%",
+                        link: "https://www.iplace.com.br/apple-watch-ultra-gps-cellular-caixa-preta-titanio-49mm-pulseira-loop-alpina-verde-escura-g-mx4t3be-a/100051805"
+                    },
+
+                    /* 230262 */
+                    {
+                        id: 5,
+                        brand: "Apple",
+                        name: 'iPad Pro 11" M4, Wi-Fi, 512GB',
+                        category: "ipad",
+                        image: "/file/general/iplace-imgs-aquece-031125-05.png",
+                        priceOld: "R$ 15.399,00",
+                        priceCurrent: "R$ 9.819",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-33%",
+                        link: "https://www.iplace.com.br/ipad-pro-11-m4-wifi-512gb-prateado-mvvd3bz-a/230262"
+                    },
+                    /* 100051977 */
+                    {
+                        id: 20,
+                        brand: "Logitech",
+                        name: "Capa Teclado iPad Universal Folio",
+                        category: "logitech",
+                        image: "/file/general/iplace-imgs-aquece-031125-20.png",
+                        priceOld: "R$ 399,90",
+                        priceCurrent: "R$ 259",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-35%",
+                        link: "https://www.iplace.com.br/capa-teclado-ipad-universal-folio-preta-logitech/100051977"
+                    },
+                    /* 100051822 */
+                    {
+                        id: 41,
+                        brand: "Apple",
+                        name: "Watch SE GPS, 40mm",
+                        category: "watch",
+                        image: "/file/general/iplace-imgs-aquece-111125-03.png",
+                        priceOld: "R$ 3.299,00",
+                        priceCurrent: "R$ 1.899",
+                        priceInstallment: "no Pix",
+                        priceDetail: "",
+                        discount: "-30%",
+                        link: "https://www.iplace.com.br/apple-watch-se-gps-caixa-estelar-aluminio-40mm-pulseira-esportiva-estelar-mg-mxeg3be-a/100051822" 
+                    }
+                ];
+
+                /* Aguarda o DOM estar completamente carregado */
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', LP_BlackFriday_initProducts);
+                } else {
+                    LP_BlackFriday_initProducts();
+                }
+
+                function LP_BlackFriday_initProducts() {
+
+                    /* Elementos do DOM */
+                    const productsGrid = document.getElementById('LP_BlackFriday_products_grid');
+                    const filterButtons = document.querySelectorAll('.LP_BlackFriday_filter_btn');
+                    const ctaButton = document.getElementById('LP_BlackFriday_cta_btn');
+
+                    /* Verifica se os elementos existem */
+                    if (!productsGrid || !filterButtons.length || !ctaButton) {
+                        console.error('LP Black Friday: Elementos de produtos não encontrados');
+                        return;
+                    }
+
+                    /* Mapeamento de categorias para nomes legíveis e links */
+                    const categoryData = {
+                        'todos': {
+                            text: '',
+                            link: 'https://www.iplace.com.br/ofertas/black-friday/cat2569834713'
+                        },
+                        'maior-desconto': {
+                            text: '',
+                            link: 'https://www.iplace.com.br/ofertas/black-friday/cat2569834713'
+                        },
+                        'iphone': {
+                            text: ' de iPhone',
+                            link: 'https://www.iplace.com.br/iphone-ver-todos/cat266380435'
+                        },
+                        'watch': {
+                            text: ' de Apple Watch',
+                            link: 'https://www.iplace.com.br/apple-watch-ver-todos/cat65071959'
+                        },
+                        'mac': {
+                            text: ' de Mac',
+                            link: 'https://www.iplace.com.br/mac-ver-todos/cat266380424'
+                        },
+                        'ipad': {
+                            text: ' de iPad',
+                            link: 'https://www.iplace.com.br/ipad-ver-todos/cat26638145'
+                        },
+                        'logitech': {
+                            text: ' de Logitech',
+                            link: 'https://www.iplace.com.br/acessorios-diversos/logitech/cat62010'
+                        },
+                        'originaisiplace': {
+                            text: ' de Acessórios',
+                            link: 'https://www.iplace.com.br/acessorios-diversos/acessorios/cat266380433'
+                        },
+                        'audiojbl': {
+                            text: ' de JBL',
+                            link: 'https://www.iplace.com.br/audio/jbl/cat266380380'
+                        }
+                    };
+
+                    /* Filtro ativo atual */
+                    let activeFilter = 'todos';
+
+                    /* Função para criar o HTML de um produto - SEM CIFRÕES */
+                    function createProductCard(product) {
+                        const isSoldOut = product.soldOut === true;
+                        const cardClass = isSoldOut ? 'LP_BlackFriday_product_card LP_BlackFriday_soldout' : 'LP_BlackFriday_product_card';
+
+                        return '<a href="' + product.link + '" target="_blank"' + (isSoldOut ? ' style="pointer-events: none; cursor: not-allowed;"' : '') + '>' +
+                            '<div class="' + cardClass + '" data-category="' + product.category + '">' +
+                            '<span class="LP_BlackFriday_discount_badge">' + product.discount + '</span>' +
+                            (isSoldOut ? '<span class="LP_BlackFriday_soldout_badge">ESGOTADO</span>' : '') +
+
+                            '<div class="LP_BlackFriday_product_image_wrapper">' +
+                            '<img src="' + product.image + '" alt="' + product.name + '" class="LP_BlackFriday_product_image">' +
+                            '</div>' +
+
+                            '<div class="LP_BlackFriday_product_textos">' +
+                            '<div>' +
+                            '<div class="LP_BlackFriday_product_brand">' + product.brand + '</div>' +
+                            '<h3 class="LP_BlackFriday_product_name">' + product.name + '</h3>' +
+                            '</div>' +
+
+                            '<div class="LP_BlackFriday_product_price_wrapper">' +
+                            (product.priceOld ? '<div class="LP_BlackFriday_product_price_old">' + product.priceOld + '</div>' : '') +
+                            '<div class="LP_BlackFriday_product_price_principal">' +
+                            '<span class="LP_BlackFriday_product_price_current">' + product.priceCurrent + '</span>' +
+                            '<span class="LP_BlackFriday_product_price_installment">' + product.priceInstallment + '</span>' +
+                            '</div>' +
+                            (product.priceDetail ? '<div class="LP_BlackFriday_product_price_detail">' + product.priceDetail + '</div>' : '') +
+                            '</div>' +
+
+                            '<button class="LP_BlackFriday_product_btn">' + (isSoldOut ? 'Indisponível' : 'Comprar') + '</button>' +
+                            '</div>' +
+                            '</div>' +
+                            '</a>';
+                    }
+
+                    /* Função para renderizar produtos */
+                    function renderProducts(filter) {
+                        filter = filter || 'todos';
+                        let filteredProducts = LP_BlackFriday_products;
+
+                        /* Filtra produtos se não for "todos" */
+                        if (filter !== 'todos') {
+                            filteredProducts = LP_BlackFriday_products.filter(function (product) {
+                                return product.category === filter;
+                            });
+                        }
+
+                        /* Se for "maior-desconto", ordena por desconto */
+                        if (filter === 'maior-desconto') {
+                            filteredProducts = LP_BlackFriday_products.slice().sort(function (a, b) {
+                                const discountA = parseInt(a.discount.replace(/[^0-9]/g, ''));
+                                const discountB = parseInt(b.discount.replace(/[^0-9]/g, ''));
+                                return discountB - discountA;
+                            });
+                        }
+
+                        /* Renderiza os produtos */
+                        productsGrid.innerHTML = filteredProducts.map(function (product) {
+                            return createProductCard(product);
+                        }).join('');
+
+                        /* Atualiza o texto do CTA */
+                        updateCTAText(filter);
+                    }
+
+                    /* Função para atualizar o texto e link do botão CTA */
+                    function updateCTAText(filter) {
+                        const baseText = 'Veja todas as ofertas';
+                        const categoryInfo = categoryData[filter] || categoryData['todos'];
+
+                        ctaButton.textContent = baseText + categoryInfo.text;
+                        ctaButton.href = categoryInfo.link;
+                    }
+
+                    /* Event listeners para os filtros */
+                    filterButtons.forEach(function (button) {
+                        button.addEventListener('click', function () {
+                            /* Remove classe ativa de todos os botões */
+                            filterButtons.forEach(function (btn) {
+                                btn.classList.remove('LP_BlackFriday_filter_active');
+                            });
+
+                            /* Adiciona classe ativa ao botão clicado */
+                            this.classList.add('LP_BlackFriday_filter_active');
+
+                            /* Obtém o filtro selecionado */
+                            activeFilter = this.getAttribute('data-filter');
+
+                            /* Renderiza produtos filtrados */
+                            renderProducts(activeFilter);
+                        });
+                    });
+
+                    /* Renderiza produtos inicialmente (todos) */
+                    renderProducts('todos');
+                }
+
+
+
+
+
+
+
+
+
+                /* ========================================
+                   FORMULÁRIO BLACK FRIDAY - VERSÃO FINAL
+                   Baseado no formulário da faixa que FUNCIONOU
+                   ======================================== */
+
+                /* Adiciona 55 no telefone */
+                function LP_BlackFriday_normalizePhoneNumber(phone) {
+                    var cleanPhone = phone.replace(/\D/g, '');
+                    if (cleanPhone.indexOf('55') === 0) {
+                        return cleanPhone;
+                    }
+                    return '55' + cleanPhone;
+                }
+
+                /* Validação em tempo real do telefone */
+                var phoneInput = document.getElementById('inp_37');
+                if (phoneInput) {
+                    phoneInput.addEventListener('input', function (e) {
+                        var value = e.target.value.replace(/\D/g, '');
+
+                        if (value.length > 13) {
+                            value = value.slice(0, 13);
+                        }
+
+                        e.target.value = value;
+
+                        var phoneError = document.getElementById('phoneError');
+                        if (phoneError) {
+                            phoneError.textContent = '';
+                        }
+                    });
+                }
+
+                /* Envia formulário */
+                function handleSubmit(event) {
+                    event.preventDefault();
+
+                    var form = event.target;
+                    var phoneInput = document.getElementById('inp_37');
+                    var phoneError = document.getElementById('phoneError');
+
+                    /* Normaliza o telefone antes de enviar */
+                    var normalizedPhone = LP_BlackFriday_normalizePhoneNumber(phoneInput.value);
+
+                    /* Validação: deve ter entre 12 e 13 dígitos */
+                    if (normalizedPhone.length < 12 || normalizedPhone.length > 13) {
+                        if (phoneError) {
+                            phoneError.textContent = 'Por favor, insira um telefone valido (DDD + numero)';
+                            phoneError.style.color = '#ff4444';
+                        }
+                        phoneInput.focus();
+                        return;
+                    }
+
+                    /* Atualiza o valor do input com o telefone normalizado */
+                    phoneInput.value = normalizedPhone;
+
+                    var formData = new FormData(form);
+                    var actionUrl = form.getAttribute('action');
+
+                    /* Envia o formulário */
+                    fetch(actionUrl, {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(function () {
+                            /* Mostra mensagem de sucesso */
+                            var formContent = document.getElementById('LP_BlackFriday_form_content');
+                            var successMessage = document.getElementById('LP_BlackFriday_successMessage');
+
+                            if (formContent) {
+                                formContent.style.display = 'none';
+                            }
+                            if (successMessage) {
+                                successMessage.classList.add('active');
+                            }
+
+                            /* Reseta após 5 segundos */
+                            setTimeout(function () {
+                                if (formContent) {
+                                    formContent.style.display = 'block';
+                                }
+                                if (successMessage) {
+                                    successMessage.classList.remove('active');
+                                }
+                                form.reset();
+                            }, 5000);
+                        })
+                        .catch(function (error) {
+                            console.error('Erro:', error);
+                            /* Mostra sucesso mesmo com erro */
+                            var formContent = document.getElementById('LP_BlackFriday_form_content');
+                            var successMessage = document.getElementById('LP_BlackFriday_successMessage');
+
+                            if (formContent) {
+                                formContent.style.display = 'none';
+                            }
+                            if (successMessage) {
+                                successMessage.classList.add('active');
+                            }
+
+                            setTimeout(function () {
+                                if (formContent) {
+                                    formContent.style.display = 'block';
+                                }
+                                if (successMessage) {
+                                    successMessage.classList.remove('active');
+                                }
+                                form.reset();
+                            }, 5000);
+                        });
+                }
+        </script>
+
+
+    </div>
+</div>
+</body></html>
