@@ -60,3 +60,49 @@
 .pc.note p.q{color:#e3ef4b;font-weight:600;border-left:2px solid var(--accent);padding-left:14px;margin-top:4px}
 .prop-wrap{padding-bottom:110px}
 .prop-end{margin-top:70px}
+
+/* ===== Menu de peças (cards como na home do projeto) ===== */
+.prop-cards.cards{padding:0;margin:0;max-width:none;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){.prop-cards.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.prop-cards.cards{grid-template-columns:1fr}}
+
+/* ===== Os 3 momentos ===== */
+.moments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mo{border-radius:22px;padding:30px 28px 32px;display:flex;flex-direction:column;gap:10px;min-width:0;border:1px solid var(--line)}
+.mo-n{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.8}
+.mo h3{font-size:clamp(26px,3vw,38px);letter-spacing:-.035em;line-height:1.05}
+.mo-off strong{font-size:18px;font-weight:800;letter-spacing:-.01em}
+.mo-date{font-size:13px;font-weight:600;opacity:.85;padding-bottom:12px;border-bottom:1px solid rgba(10,10,11,.25)}
+.mo ul{list-style:none;display:grid;gap:8px;margin-top:4px}
+.mo li{font-size:14.5px;line-height:1.5}
+.mo.m1{background:#6f7a06;color:#f5f5f7}
+.mo.m1 .mo-date{border-bottom-color:rgba(245,245,247,.3)}
+.mo.m2{background:#a8b80c;color:#0a0a0b}
+.mo.m3{background:#e3ef4b;color:#0a0a0b}
+
+/* ===== CalendÃ¡rio ===== */
+.cal-card{background:linear-gradient(180deg,#16161a,#111114);border:1px solid var(--line);border-radius:22px;padding:28px clamp(16px,2.6vw,36px)}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cal-h{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:center;padding-bottom:8px}
+.cal-d{min-height:86px;border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:4px;border:1px solid transparent}
+.cal-d b{font-size:15px;font-weight:700}
+.cal-d span{font-size:10.5px;font-weight:700;letter-spacing:.04em;line-height:1.2;text-transform:uppercase}
+.cal-d.s0{background:transparent;border-color:rgba(245,245,247,.22);color:#9a9aa6}
+.cal-d.s1{background:#6f7a06;color:#f5f5f7}
+.cal-d.s2{background:#a8b80c;color:#0a0a0b}
+.cal-d.s3{background:#e3ef4b;color:#0a0a0b}
+.cal-d.s4{background:repeating-linear-gradient(45deg,#e3ef4b,#e3ef4b 7px,#c6d30d 7px,#c6d30d 14px);color:#0a0a0b}
+.cal-leg{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:22px;font-size:12.5px;color:#b9b9c3}
+.cal-leg span{display:inline-flex;align-items:center;gap:8px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px}
+.sw.s0{border:1px solid rgba(245,245,247,.35)}
+.sw.s1{background:#6f7a06}.sw.s2{background:#a8b80c}.sw.s3{background:#e3ef4b}
+.sw.s4{background:repeating-linear-gradient(45deg,#e3ef4b,#e3ef4b 3px,#c6d30d 3px,#c6d30d 6px)}
+
+@media (max-width:900px){.moments{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .cal{gap:4px}
+  .cal-d{min-height:58px;padding:6px 6px}
+  .cal-d span{font-size:8.5px}
+  .cal-h{font-size:9.5px;letter-spacing:0}
+}

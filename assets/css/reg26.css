@@ -1,0 +1,291 @@
+/* Cronômetro e cadastro da LP de 2025, usados também na LP de conteúdo (cópia dos estilos de lps/aquece.html) */
+.LP_BlackFriday_countdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LP_BlackFriday_countdown_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 18px 9px;
+    min-width: 60px;
+    border-radius: 8.779px;
+    border: 0.878px solid rgba(255, 255, 255, 0.85);
+    background: #1D1D1D;
+    box-shadow: 0 4.389px 4.389px 0 rgba(0, 0, 0, 0.61), 0 7.711px 21.933px 0 rgba(0, 0, 0, 0.76);
+}
+
+.LP_BlackFriday_countdown_number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LP_BlackFriday_countdown_label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: lowercase;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.LP_BlackFriday_countdown_separator {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 -2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.LP_BlackFriday_content_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 90%;
+}
+.LP_BlackFriday_register_section {
+    padding: 80px 0;
+}
+
+.LP_BlackFriday_register_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.LP_BlackFriday_register_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LP_BlackFriday_register_image img {
+    width: 100%;
+}
+
+.LP_BlackFriday_register_emoji {
+    font-size: 200px;
+    line-height: 1;
+}
+
+.LP_BlackFriday_register_form_wrapper {
+    border-radius: 16px;
+    background: #000;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.LP_BlackFriday_register_header h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Checkboxes de Interesses */
+
+.LP_BlackFriday_checkbox_section {
+    margin-bottom: 25px;
+}
+
+.LP_BlackFriday_checkbox_title {
+    font-size: 14px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.LP_BlackFriday_checkbox_grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.LP_BlackFriday_checkbox_option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.LP_BlackFriday_checkbox_option:hover {
+    background-color: #2a2a2a;
+}
+
+.LP_BlackFriday_checkbox_option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #C4D200;
+}
+
+.LP_BlackFriday_checkbox_option span {
+    color: rgba(255, 255, 255, 0.90);
+    text-align: center;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+/* Subtítulo do formulário */
+
+.LP_BlackFriday_form_subtitle {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Campos do formulário */
+
+.LP_BlackFriday_dadospessoais_section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
+
+.LP_BlackFriday_form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.LP_BlackFriday_form_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.LP_BlackFriday_form_content {
+    width: 100%;
+    max-width: 100%;
+}
+
+.LP_BlackFriday_form_content form input {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    background: rgba(255, 255, 255, 0.10);
+    display: flex;
+    padding: 11px 16px;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+.LP_BlackFriday_form_content form p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 119%;
+    margin-bottom: 12px;
+}
+
+.LP_BlackFriday_form_content form input:focus,
+.LP_BlackFriday_form_group input:focus {
+    outline: none;
+    border-color: #C4D200;
+}
+
+.LP_BlackFriday_form_group input::placeholder {
+    color: #666666;
+}
+
+.LP_BlackFriday_error_message {
+    font-size: 12px;
+    color: #ff4444;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+.LP_BlackFriday_submit_btn {
+    width: auto;
+    min-width: 132px;
+    background-color: #C4D200;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+    height: 40px;
+    margin-left: 12px;
+}
+
+.LP_BlackFriday_submit_btn:hover {
+    background-color: #d4e200;
+}
+
+/* Mensagem de sucesso */
+
+.LP_BlackFriday_success_message {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.LP_BlackFriday_success_message.active {
+    display: block;
+}
+
+.LP_BlackFriday_success_icon {
+    width: 80px;
+    height: 80px;
+    background-color: #C4D200;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 auto 25px;
+}
+
+.LP_BlackFriday_success_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.LP_BlackFriday_success_text {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+

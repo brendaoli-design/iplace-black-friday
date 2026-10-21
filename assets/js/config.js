@@ -2,7 +2,9 @@
 // Em localhost / arquivo aberto direto no computador, usa a cópia da pasta "arquivos para hospedar".
 const IMG_PREFIX = 'iplace-black-131026-';
 const IMG_HOSTED = 'https://www.iplace.com.br/file/general/' + IMG_PREFIX;
-const IMG_LOCAL = 'arquivos para hospedar/' + IMG_PREFIX;
+// Raiz do projeto, calculada a partir deste arquivo (funciona de qualquer subpasta)
+const SITE_ROOT = new URL('../../', document.currentScript.src).href;
+const IMG_LOCAL = SITE_ROOT + 'arquivos para hospedar/' + IMG_PREFIX;
 const IS_LOCAL = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname);
 const imgUrl = name => (IS_LOCAL ? IMG_LOCAL : IMG_HOSTED) + name;
 

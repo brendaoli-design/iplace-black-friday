@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta de landing page · Black Friday 2025 Recap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo"><img data-img="logo-iplace.svg" alt="iPlace" height="34"><span class="sep"></span><span class="tag">Web Design</span></a>
+  <button class="menu-btn" aria-label="Menu">Menu</button>
+  <nav class="nav">
+    <a href="landing-page.html">Landing Page</a>
+    <a href="home-site.html">Home Site</a>
+    <a href="emails-crm.html">E-mails · CRM</a>
+    <a href="acoes.html">Ações</a>
+    <a href="resultados.html">Resultados</a>
+    <a href="proposta-2026.html" class="active">Proposta 2026</a>
+  </nav>
+</header>
+
+<div class="side">
+  <aside class="phases" aria-label="Fases da Black Friday">
+    <div class="label">Fases</div>
+    <button data-phase="conteudo"><span class="dot"></span>Conteúdo · ano todo</button>
+    <button data-phase="aquece"><span class="dot"></span>Aquece Black</button>
+    <button data-phase="black-friday"><span class="dot"></span>Black Friday</button>
+  </aside>
+  <aside class="devices" aria-label="Dispositivo de visualização">
+    <div class="label">Escolha o device de visualização</div>
+    <div class="toggle">
+      <button data-device="desktop" class="active">Desktop</button>
+      <button data-device="mobile">Mobile</button>
+    </div>
+  </aside>
+</div>
+
+<main>
+  <section class="viewer">
+    <div class="stage">
+      <div class="frame" id="hframe">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <iframe title="Proposta de landing page para a Black 2026"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span><strong>Black Friday 2025 Recap</strong> · Web Design E-commerce</span>
+  <span>Por Brenda Oliveira · iPlace · Planejamento</span>
+</footer>
+<script src="assets/js/config.js"></script>
+<script>
+// Menu mobile
+var mb = document.querySelector('.menu-btn');
+if (mb) mb.addEventListener('click', function () { document.querySelector('.nav').classList.toggle('open'); });
+
+// Fases e device da proposta de home (a home em si fica em home-2026.html, dentro do iframe)
+(function () {
+  var frame = document.getElementById('hframe');
+  var iframe = frame.querySelector('iframe');
+  var paginas = { 'conteudo': 'lps2026/conteudo.html', 'aquece': 'lps2026/aquece.html', 'black-friday': 'lps2026/black-friday.html' };
+function setPhase(k) {    if (!paginas[k]) k = 'conteudo';    iframe.src = paginas[k];    document.querySelectorAll('.phases button').forEach(function (b) { b.classList.toggle('active', b.dataset.phase === k); });    history.replaceState(null, '', '#' + k);  }
+  function setDevice(m) {
+    frame.classList.toggle('mobile', m === 'mobile');
+    document.querySelectorAll('.toggle button').forEach(function (b) { b.classList.toggle('active', b.dataset.device === m); });
+  }
+  document.querySelectorAll('.phases button').forEach(function (b) { b.addEventListener('click', function () { setPhase(b.dataset.phase); }); });
+  document.querySelectorAll('.toggle button').forEach(function (b) { b.addEventListener('click', function () { setDevice(b.dataset.device); }); });
+  setPhase(location.hash.slice(1));
+})();
+</script>
+</body>
+</html>
