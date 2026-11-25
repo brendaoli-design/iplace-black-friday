@@ -7,6 +7,48 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+.perf-cta{display:block;width:100%;margin-top:10px;padding:10px 8px;border:0;border-radius:12px;background:var(--accent);color:#0a0a0b;font:inherit;font-size:13px;font-weight:700;line-height:1.25;cursor:pointer;transition:.2s}
+.perf-cta:hover{background:var(--accent-2)}
+.pm{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
+.pm.open{display:flex}
+.pm-bg{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+.pm-box{position:relative;width:100%;max-width:880px;max-height:92vh;overflow:auto;background:var(--bg-2);border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.6);padding:26px clamp(16px,3vw,32px) 24px}
+.pm-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:20px;line-height:1;cursor:pointer}
+.pm-box h2{font-size:clamp(20px,3vw,26px);letter-spacing:-.02em;font-weight:800;padding-right:44px}
+.pm-sub{color:var(--muted);font-size:13px;margin:4px 0 18px}
+.pm-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.pm-tabs button{background:var(--surface);border:1px solid var(--line);color:var(--muted);font:inherit;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.pm-tabs button:hover{color:var(--text)}
+.pm-tabs button[aria-selected="true"]{background:var(--text);color:#0a0a0b;font-weight:600;border-color:var(--text)}
+.pm-url{font-size:13px;color:var(--accent-2);margin-bottom:14px;word-break:break-all}
+.pm-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.pm-kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pm-kpi > span{display:block;font-size:12px;color:var(--muted)}
+.pm-kpi b{display:block;white-space:nowrap;margin-top:4px;font-size:clamp(20px,3vw,26px);font-weight:800;letter-spacing:-.02em}
+.pm-kpi.hi{border-color:rgba(198,211,13,.45)}
+.pm-kpi.hi b{color:var(--accent-2)}
+.pm-tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+.pm-tbl table{width:100%;border-collapse:collapse;font-size:13px;min-width:720px}
+.pm-tbl th,.pm-tbl td{padding:10px 8px;text-align:right;white-space:nowrap}
+.pm-tbl th:first-child,.pm-tbl td:first-child{text-align:left}
+.pm-tbl thead th{color:var(--muted);font-weight:500;font-size:12px;background:var(--surface);white-space:normal;vertical-align:bottom}
+.pm-tbl tbody tr{border-top:1px solid var(--line)}
+.pm-tbl tfoot tr{border-top:2px solid var(--accent);background:rgba(198,211,13,.08);font-weight:800}
+.pm-kpi b .sep{display:inline-block;width:1px;height:.9em;background:rgba(255,255,255,.55);margin:0 12px;vertical-align:-.08em}
+.pm-kpi b .cv{color:var(--accent-2)}
+.pm-kpi b .cv small{font-size:12px;font-weight:300;margin-left:8px;letter-spacing:0}
+.pm-kpi b.zero,.pm-kpi b .zero,.pm-tbl td.zero{color:#ff5a5f}
+.pm-kpi b.zero .cv{color:#ff5a5f}
+.pm-box.wide{max-width:1180px}
+.pm-box.wide .pm-tbl table{min-width:960px;font-size:14px}
+.pm-box.wide .pm-tbl th,.pm-box.wide .pm-tbl td{padding:15px 16px}
+.pm-tbl td.best{color:#c4d200;background:rgba(196,210,0,.14)}
+.pm-tbl td.best small{display:block;font-size:11px;font-weight:600}
+
+
+.pm-note{color:var(--muted);font-size:12px;margin-top:12px;line-height:1.5}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -36,6 +78,7 @@
       <button data-device="desktop" class="active">Desktop</button>
       <button data-device="mobile">Mobile</button>
     </div>
+    <button type="button" class="perf-cta" id="perf-open">Veja a performance das páginas</button>
   </aside>
 </div>
 
@@ -49,6 +92,17 @@
     </div>
   </section>
 </main>
+
+<div class="pm" id="pm" role="dialog" aria-modal="true" aria-labelledby="pm-t">
+  <div class="pm-bg" data-pm-close></div>
+  <div class="pm-box">
+    <button class="pm-x" data-pm-close aria-label="Fechar">×</button>
+    <h2 id="pm-t">Performance das páginas</h2>
+    <p class="pm-sub">Período: 01/11 a 24/11. Dados totais de cada página de destino (Google Analytics), sem separar por origem.</p>
+    <div class="pm-tabs" role="tablist" id="pm-tabs"></div>
+    <div id="pm-body"></div>
+  </div>
+</div>
 
 <footer class="site-footer">
   <span><strong>Black Friday 2025 Recap</strong> · Web Design E-commerce</span>
@@ -73,6 +127,58 @@ function setPhase(k) {    if (!paginas[k]) k = 'bradesco';    iframe.src = pagin
   document.querySelectorAll('.phases button').forEach(function (b) { b.addEventListener('click', function () { setPhase(b.dataset.phase); }); });
   document.querySelectorAll('.toggle button').forEach(function (b) { b.addEventListener('click', function () { setDevice(b.dataset.device); }); });
   setPhase(location.hash.slice(1));
+})();
+
+// ===== Modal: performance das páginas (dados totais do GA, por página de destino) =====
+(function () {
+  var D = [
+    { k: 'bradesco', n: 'Bradesco', url: '/exclusivo-bradesco', s: 2492, u: 2203, e: 99.76, t: 86, c: 195, p: 7, r: 58099.64 },
+    { k: 'porto', n: 'Porto Bank', url: '/Porto-Bank', s: 438, u: 413, e: 99.54, t: 34, c: 35, p: 0, r: 0 },
+    { k: 'c6', n: 'C6 Bank', url: '/c6-bank', s: 74026, u: 64914, e: 99.35, t: 21, c: 1136, p: 10, r: 48056.11 },
+    { k: 'btg', n: 'BTG Pactual', url: '/btg-pactual', s: 2871, u: 2789, e: 99.86, t: 37, c: 96, p: 0, r: 0 }
+  ];
+  var tot = { s: 0, u: 0, c: 0, p: 0, r: 0, ew: 0, tw: 0 };
+  D.forEach(function (d) { tot.s += d.s; tot.u += d.u; tot.c += d.c; tot.p += d.p; tot.r += d.r; tot.ew += d.e * d.s; tot.tw += d.t * d.s; });
+  tot.e = tot.ew / tot.s; tot.t = tot.tw / tot.s;
+  var nf = new Intl.NumberFormat('pt-BR');
+  var brl = function (v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); };
+  var pct = function (v) { return v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%'; };
+  var tm = function (sec) { sec = Math.round(sec); return sec >= 60 ? Math.floor(sec / 60) + ' min ' + (sec % 60) + ' s' : sec + 's'; };
+  var tabs = document.getElementById('pm-tabs'), body = document.getElementById('pm-body'), pm = document.getElementById('pm');
+  var cv = function (a, b) { return (b ? a / b * 100 : 0).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%'; };
+  function kpi(l, v, hi, z) { return '<div class="pm-kpi' + (hi ? ' hi' : '') + '"><span>' + l + '</span><b' + (z ? ' class="zero"' : '') + '>' + v + '</b></div>'; }
+  function kpiCv(l, v, c, hi, z) { return '<div class="pm-kpi' + (hi ? ' hi' : '') + '"><span>' + l + '</span><b' + (z ? ' class="zero"' : '') + '>' + v + '<span class="sep"></span><span class="cv">' + c + '<small>Conversão</small></span></b></div>'; }
+  function banco(d) {
+    return '<p class="pm-url">iplace.com.br' + d.url + '</p><div class="pm-kpis">' +
+      kpi('Sessões', nf.format(d.s)) + kpi('Total de usuários', nf.format(d.u)) + kpi('Taxa de engajamento', pct(d.e)) +
+      kpi('Tempo médio de engajamento por sessão', tm(d.t)) + kpiCv('Adicionar aos carrinhos', nf.format(d.c), cv(d.c, d.s)) +
+      kpiCv('Compras', nf.format(d.p), cv(d.p, d.c), 1, !d.p) + kpi('Receita total', brl(d.r), 1, !d.r) + '</div>';
+  }
+  function compilado() {
+    var maxR = Math.max.apply(null, D.map(function (d) { return d.r; }));
+    var maxC = Math.max.apply(null, D.map(function (d) { return d.c ? d.p / d.c : 0; }));
+    var rows = D.map(function (d) {
+      var bR = d.r === maxR && maxR > 0, bC = d.c && d.p / d.c === maxC && maxC > 0;
+      return '<tr><td>' + d.n + '<br><small style="color:var(--muted)">' + d.url + '</small></td><td>' + nf.format(d.s) + '</td><td>' + nf.format(d.u) + '</td><td>' + pct(d.e) + '</td><td>' + tm(d.t) + '</td><td>' + nf.format(d.c) + '</td><td>' + nf.format(d.p) + '</td><td' + (bR ? ' class="best"' : !d.r ? ' class="zero"' : '') + '>' + brl(d.r) + (bR ? '<small>Melhor receita</small>' : '') + '</td><td' + (bC ? ' class="best"' : !d.p ? ' class="zero"' : '') + '>' + cv(d.p, d.c) + (bC ? '<small>Melhor conversão</small>' : '') + '</td></tr>';
+    }).join('');
+    return '<div class="pm-tbl"><table><thead><tr><th>Página</th><th>Sessões</th><th>Total de usuários</th><th>Taxa de engajamento</th><th>Tempo médio de engajamento por sessão</th><th>Adicionar aos carrinhos</th><th>Compras</th><th>Receita total</th><th>Conversão<br>(carrinho → compra)</th></tr></thead><tbody>' + rows +
+      '</tbody><tfoot><tr><td>Total das 4 páginas</td><td>' + nf.format(tot.s) + '</td><td>' + nf.format(tot.u) + '</td><td>' + pct(tot.e) + '</td><td>' + tm(tot.t) + '</td><td>' + nf.format(tot.c) + '</td><td>' + nf.format(tot.p) + '</td><td>' + brl(tot.r) + '</td><td>' + cv(tot.p, tot.c) + '</td></tr></tfoot></table></div>' +
+      
+      '<p class="pm-note">Conversão de Adicionar aos carrinhos = carrinhos ÷ sessões. Conversão de Compras = compras ÷ carrinhos. Taxa de engajamento e tempo médio no total são médias ponderadas pelas sessões. O total de usuários é a soma das páginas, então um mesmo usuário que visitou mais de uma página é contado mais de uma vez.</p>';
+  }
+  function show(k) {
+    [].forEach.call(tabs.children, function (b) { b.setAttribute('aria-selected', b.dataset.k === k); });
+    var d = D.filter(function (x) { return x.k === k; })[0];
+    document.querySelector('.pm-box').classList.toggle('wide', !d);
+    body.innerHTML = d ? banco(d) : compilado();
+  }
+  tabs.innerHTML = D.concat([{ k: 'todos', n: 'Compilado' }]).map(function (d) { return '<button role="tab" data-k="' + d.k + '">' + d.n + '</button>'; }).join('');
+  tabs.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) show(b.dataset.k); });
+  function open() { pm.classList.add('open'); show('bradesco'); document.body.style.overflow = 'hidden'; }
+  function close() { pm.classList.remove('open'); document.querySelector('.pm-box').classList.remove('wide'); document.body.style.overflow = ''; }
+  document.getElementById('perf-open').addEventListener('click', open);
+  pm.addEventListener('click', function (e) { if (e.target.closest('[data-pm-close]')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 </script>
 </body>
