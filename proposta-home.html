@@ -18,15 +18,15 @@
     <a href="emails-crm.html">E-mails · CRM</a>
     <a href="acoes.html">Ações</a>
     <a href="resultados.html">Resultados</a>
-    <a href="proposta-2026.html" class="active">Proposta 2026</a>
+    <a href="proposta-2026.html" class="active">Black 2026</a>
   </nav>
 </header>
 
 <div class="side">
   <aside class="phases" aria-label="Fases da Black Friday">
     <div class="label">Fases</div>
+    <button data-phase="aquece-1111"><span class="dot"></span>11.11 + Aquece</button>
     <button data-phase="aquece"><span class="dot"></span>Aquece Black</button>
-    <button data-phase="pre-black"><span class="dot"></span>Pré-Black</button>
     <button data-phase="black-friday"><span class="dot"></span>Black Friday</button>
   </aside>
   <aside class="devices" aria-label="Dispositivo de visualização">
@@ -59,17 +59,14 @@
 var mb = document.querySelector('.menu-btn');
 if (mb) mb.addEventListener('click', function () { document.querySelector('.nav').classList.toggle('open'); });
 
-// Fases e device da proposta de home (a home em si fica em home-2026.html, dentro do iframe)
+// Fases e device da proposta de home (cada fase é uma página em home2026/, dentro do iframe)
 (function () {
   var frame = document.getElementById('hframe');
   var iframe = frame.querySelector('iframe');
-  var fases = ['aquece', 'pre-black', 'black-friday'];
+  var paginas = { 'aquece-1111': 'home2026/aquece-1111.html', 'aquece': 'home2026/aquece.html', 'black-friday': 'home2026/black-friday.html' };
   function setPhase(k) {
-    if (fases.indexOf(k) < 0) k = 'aquece';
-    var url = 'home-2026.html#' + k;
-    iframe.src = url;
-    try { iframe.contentWindow.postMessage({ fase: k }, '*'); } catch (e) {}
-    // só o #fase muda: a home não recarrega e troca o logo pelo evento hashchange
+    if (!paginas[k]) k = 'aquece-1111';
+    iframe.src = paginas[k];
     document.querySelectorAll('.phases button').forEach(function (b) { b.classList.toggle('active', b.dataset.phase === k); });
     history.replaceState(null, '', '#' + k);
   }

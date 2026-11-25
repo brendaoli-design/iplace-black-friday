@@ -1,0 +1,712 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Home · Black Friday · proposta 2026</title></head><body style="margin:0;background:#fff">
+<div class="raw-html-embed">
+          
+        
+    <div class="row-full">
+                    <style>
+                      /* ============================================================
+                         BLACK FRIDAY iPLACE - KV + ofertas rotativas (OCC: HTML + CSS, sem tag script)
+                         Prefixo das classes/ids: LP_BlackFriday_KV_
+                         Medidas tiradas do Figma (frame 3383:986). Conversao: 1px do Figma = 0.09099cqw
+                         (largura de referencia 1099px). Acima de 768px a peca escala proporcionalmente;
+                         ate 767px vira layout empilhado (celular), com tamanhos proprios.
+                         Ofertas: 4 x 2 s (ciclo de 8 s). Para mudar o tempo: troque 8s no .LP_BlackFriday_KV_sl e no
+                         .LP_BlackFriday_KV_tabs a, os atrasos 0s/2s/4s/6s (.LP_BlackFriday_KV_sl1..4 e .LP_BlackFriday_KV_t1..4) e o 2000*n no onclick de cada aba.
+                         ============================================================ */
+                      .LP_BlackFriday_KV_page {
+                        background: #000000;
+                        color: #ffffff;
+                        font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+                        -webkit-text-size-adjust: 100%;
+                      }
+                      .LP_BlackFriday_KV_pg {
+                        width: 100%;
+                        max-width: 1099px;
+                        margin: 0 auto;
+                        container-type: inline-size;
+                      }
+                      .LP_BlackFriday_KV_kv {
+                        width: 100%;
+                        container-type: inline-size;
+                      }
+                      .LP_BlackFriday_KV_kv *,
+                      .LP_BlackFriday_KV_kv *::before,
+                      .LP_BlackFriday_KV_kv *::after {
+                        box-sizing: border-box;
+                        font-family: inherit;
+                      }
+                      :where(.LP_BlackFriday_KV_kv) p {
+                        margin: 0;
+                      }
+                      :where(.LP_BlackFriday_KV_kv) a {
+                        text-decoration: none;
+                      }
+                      .LP_BlackFriday_KV_kv svg {
+                        display: block;
+                      }
+                      .LP_BlackFriday_KV_row {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 3.55cqw;
+                        padding: 2.6cqw 0;
+                      }
+                      /* ---------- ESQUERDA: logo + frete + aproveite ---------- */
+                      .LP_BlackFriday_KV_left {
+                        flex: none;
+                        width: 41.49cqw;
+                        padding-top: 4.82cqw;
+                      }
+                      .LP_BlackFriday_KV_logo {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                      }
+                      .LP_BlackFriday_KV_logo svg {
+                        width: 100%;
+                        height: auto;
+                      }
+                      .LP_BlackFriday_KV_lgf {
+                        margin-top: 1.09cqw;
+                      }
+                      .LP_BlackFriday_KV_frete {
+                        color: #ffffff;
+                        margin-top: 1.77cqw;
+                        width: 100%;
+                        background: #000000;
+                        border: 1px solid #ffffffc7;
+                        border-radius: .788cqw;
+                        padding: .728cqw 1.456cqw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .728cqw;
+                      }
+                      .LP_BlackFriday_KV_frete svg {
+                        flex: none;
+                        width: 3.814cqw;
+                        height: auto;
+                      }
+                      .LP_BlackFriday_KV_frete_t {
+                        flex: none;
+                        font-size: 2.093cqw;
+                        line-height: 1.21;
+                        font-weight: 700;
+                        letter-spacing: -.0628cqw;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        color: #c4d200;
+                      }
+                      .LP_BlackFriday_KV_frete_s {
+                        flex: none;
+                        font-size: max(12px, 1.456cqw);
+                        line-height: 1.21;
+                        font-weight: 600;
+                        letter-spacing: -.02em;
+                        white-space: nowrap;
+                        color: #ffffff;
+                      }
+                      .LP_BlackFriday_KV_apv {
+                        margin: 1.24cqw auto 0;
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #c8d400;
+                        border-radius: 1.003cqw;
+                        padding: .927cqw 1.854cqw;
+                      }
+                      .LP_BlackFriday_KV_apv svg {
+                        width: 11.34cqw;
+                        height: auto;
+                      }
+                      /* ---------- DIREITA: card de ofertas ---------- */
+                      .LP_BlackFriday_KV_card {
+                        position: relative;
+                        flex: none;
+                        width: 54.96cqw;
+                        height: 35.21cqw;
+                        background: #0a0a0a;
+                        border: 1px solid #454545;
+                        border-radius: 1.038cqw;
+                        overflow: hidden;
+                      }
+                      /* menu: o item da vez fica branco, os outros #262626 */
+                      .LP_BlackFriday_KV_tabs {
+                        position: absolute;
+                        top: 2.184cqw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        gap: 1.456cqw;
+                      }
+                      .LP_BlackFriday_KV_tabs a {
+                        display: block;
+                        padding: .364cqw 1.456cqw;
+                        border-radius: 80px;
+                        font-size: max(11px, 1.183cqw);
+                        line-height: 1.21;
+                        font-weight: 600;
+                        letter-spacing: -.01em;
+                        white-space: nowrap;
+                        color: #ffffff;
+                        background: #262626;
+                        cursor: pointer;
+                        animation: LP_BlackFriday_KV_tb 8s linear infinite;
+                      }
+                      @keyframes LP_BlackFriday_KV_tb {
+                        0%, 24.9% { color: #000000; background: #ffffff; }
+                        25%, 100% { color: #ffffff; background: #262626; }
+                      }
+                      .LP_BlackFriday_KV_tabs .LP_BlackFriday_KV_t1 { animation-delay: 0s; }
+                      .LP_BlackFriday_KV_tabs .LP_BlackFriday_KV_t2 { animation-delay: 2s; }
+                      .LP_BlackFriday_KV_tabs .LP_BlackFriday_KV_t3 { animation-delay: 4s; }
+                      .LP_BlackFriday_KV_tabs .LP_BlackFriday_KV_t4 { animation-delay: 6s; }
+                      .LP_BlackFriday_KV_sw {
+                        position: absolute;
+                        top: 4.37cqw;
+                        left: 0;
+                        right: 0;
+                        height: 29.76cqw;
+                      }
+                      .LP_BlackFriday_KV_sl {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        gap: 2.46cqw;
+                        padding: 0 4.82cqw 0 .91cqw;
+                        opacity: 0;
+                        visibility: hidden;
+                        animation: LP_BlackFriday_KV_sl 8s cubic-bezier(.2, .8, .2, 1) infinite;
+                      }
+                      @keyframes LP_BlackFriday_KV_sl {
+                        0% { opacity: 0; visibility: hidden; transform: translateX(1.5cqw); }
+                        4%, 21% { opacity: 1; visibility: visible; transform: none; }
+                        25%, 100% { opacity: 0; visibility: hidden; transform: translateX(-1.5cqw); }
+                      }
+                      .LP_BlackFriday_KV_sl1 { animation-delay: 0s; }
+                      .LP_BlackFriday_KV_sl2 { animation-delay: 2s; }
+                      .LP_BlackFriday_KV_sl3 { animation-delay: 4s; }
+                      .LP_BlackFriday_KV_sl4 { animation-delay: 6s; }
+                      .LP_BlackFriday_KV_ph {
+                        flex: none;
+                        display: block;
+                        width: 27.3cqw;
+                        height: 27.3cqw;
+                      }
+                      .LP_BlackFriday_KV_ph img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        max-width: none;
+                        object-fit: contain;
+                      }
+                      .LP_BlackFriday_KV_tx {
+                        flex: none;
+                        width: 19.5cqw;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                      }
+                      .LP_BlackFriday_KV_nm {
+                        font-size: 2.544cqw;
+                        line-height: 1.14;
+                        font-weight: 600;
+                        letter-spacing: -.0509cqw;
+                        white-space: nowrap;
+                        color: #ffffff;
+                      }
+                      .LP_BlackFriday_KV_lb {
+                        margin-top: 1.73cqw;
+                        font-size: 1.696cqw;
+                        line-height: 1.14;
+                        font-weight: 300;
+                        letter-spacing: .017cqw;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        color: #ffffffcc;
+                      }
+                      .LP_BlackFriday_KV_pr {
+                        margin-top: -.29cqw;
+                        font-size: 4.996cqw;
+                        line-height: 1.14;
+                        font-weight: 700;
+                        letter-spacing: -.2498cqw;
+                        white-space: nowrap;
+                        color: #c4d200;
+                      }
+                      .LP_BlackFriday_KV_pr small {
+                        font-size: 3.392cqw;
+                        font-weight: 700;
+                        letter-spacing: -.1696cqw;
+                      }
+                      .LP_BlackFriday_KV_chips {
+                        margin-top: 1.1cqw;
+                        display: flex;
+                        justify-content: center;
+                        gap: .55cqw;
+                      }
+                      .LP_BlackFriday_KV_chips a {
+                        display: block;
+                        border: 1px solid #ffffff99;
+                        border-radius: 80px;
+                        padding: .3cqw .9cqw;
+                        font-size: max(11px, 1.1cqw);
+                        line-height: 1.21;
+                        font-weight: 600;
+                        color: #ffffff;
+                      }
+                      .LP_BlackFriday_KV_chips a:hover {
+                        background: #ffffff;
+                        color: #000000;
+                      }
+                      .LP_BlackFriday_KV_cta {
+                        margin-top: 1.55cqw;
+                        display: block;
+                        background: #c8d400;
+                        border-radius: 80px;
+                        padding: .546cqw 1.456cqw;
+                        font-size: max(12px, 1.456cqw);
+                        line-height: 1.14;
+                        font-weight: 700;
+                        letter-spacing: -.02em;
+                        white-space: nowrap;
+                        color: #000000;
+                      }
+                      .LP_BlackFriday_KV_frete:hover {
+                        border-color: #ffffff;
+                      }
+                      .LP_BlackFriday_KV_cta:hover,
+                      .LP_BlackFriday_KV_apv:hover {
+                        background: #d6e400;
+                      }
+                      /* mouse em cima do card pausa a rotacao */
+                      .LP_BlackFriday_KV_card:hover .LP_BlackFriday_KV_sl,
+                      .LP_BlackFriday_KV_card:hover .LP_BlackFriday_KV_tabs a {
+                        animation-play-state: paused;
+                      }
+                      .LP_BlackFriday_KV_kv a:focus-visible {
+                        outline: 2px solid #ffffff;
+                        outline-offset: 3px;
+                      }
+                      /* ============================================================
+                         CELULAR / TELAS ESTREITAS (ate 767px): tudo empilhado.
+                         Foco em 320px a 568px. Medidas em cqw (largura do bloco, max. 560px).
+                         ============================================================ */
+                      @container (max-width: 767px) {
+                        .LP_BlackFriday_KV_kv {
+                          max-width: 560px;
+                          margin: 0 auto;
+                        }
+                        .LP_BlackFriday_KV_row {
+                          flex-direction: column;
+                          align-items: stretch;
+                          gap: 5.5cqw;
+                          padding: 5.5cqw 4cqw 6cqw;
+                        }
+                        .LP_BlackFriday_KV_left {
+                          width: 100%;
+                          padding-top: 0;
+                        }
+                        .LP_BlackFriday_KV_lgf { margin-top: 2.6cqw; }
+                        .LP_BlackFriday_KV_frete {
+                          margin-top: 4.2cqw;
+                          flex-wrap: wrap;
+                          border-radius: 2cqw;
+                          padding: 3cqw 3.5cqw;
+                          gap: 1.2cqw 2cqw;
+                        }
+                        .LP_BlackFriday_KV_frete svg { width: 9cqw; }
+                        .LP_BlackFriday_KV_frete_t {
+                          font-size: 5.6cqw;
+                          letter-spacing: -.03em;
+                        }
+                        .LP_BlackFriday_KV_frete_s {
+                          flex: 0 0 100%;
+                          text-align: center;
+                          white-space: normal;
+                          font-size: max(12px, 3.9cqw);
+                          letter-spacing: -.02em;
+                        }
+                        .LP_BlackFriday_KV_apv {
+                          margin-top: 3.6cqw;
+                          border-radius: 2.8cqw;
+                          padding: 2.6cqw 5.2cqw;
+                        }
+                        .LP_BlackFriday_KV_apv svg { width: 31cqw; }
+                        .LP_BlackFriday_KV_card {
+                          width: 100%;
+                          height: auto;
+                          border-radius: 2.6cqw;
+                        }
+                        .LP_BlackFriday_KV_tabs {
+                          position: static;
+                          transform: none;
+                          margin: 4cqw auto 0;
+                          justify-content: center;
+                          gap: 2cqw;
+                          width: fit-content;
+                        }
+                        .LP_BlackFriday_KV_tabs a {
+                          padding: 1.1cqw 3.4cqw;
+                          font-size: max(12px, 3.3cqw);
+                        }
+                        .LP_BlackFriday_KV_sw {
+                          position: relative;
+                          top: 0;
+                          height: 50cqw;
+                        }
+                        .LP_BlackFriday_KV_sl {
+                          gap: 1cqw;
+                          padding: 0 3cqw 0 1cqw;
+                        }
+                        .LP_BlackFriday_KV_ph {
+                          width: 41cqw;
+                          height: 41cqw;
+                        }
+                        .LP_BlackFriday_KV_tx { width: 43cqw; }
+                        .LP_BlackFriday_KV_nm {
+                          font-size: max(16px, 5.4cqw);
+                          letter-spacing: -.01em;
+                        }
+                        .LP_BlackFriday_KV_lb {
+                          margin-top: 2.4cqw;
+                          font-size: max(11px, 3.3cqw);
+                          letter-spacing: .01em;
+                        }
+                        .LP_BlackFriday_KV_pr {
+                          margin-top: -.6cqw;
+                          font-size: 9.4cqw;
+                          letter-spacing: -.045em;
+                        }
+                        .LP_BlackFriday_KV_pr small {
+                          font-size: 6.6cqw;
+                          letter-spacing: -.03em;
+                        }
+                        .LP_BlackFriday_KV_chips {
+                          margin-top: 2.4cqw;
+                          gap: 1.2cqw;
+                        }
+                        .LP_BlackFriday_KV_chips a {
+                          padding: .9cqw 2.4cqw;
+                          font-size: max(11px, 3cqw);
+                        }
+                        .LP_BlackFriday_KV_cta {
+                          margin-top: 3.4cqw;
+                          padding: 1.7cqw 4cqw;
+                          font-size: max(12px, 3.6cqw);
+                          letter-spacing: -.02em;
+                        }
+                      }
+                      /* sem animacao: mostra a 1a oferta */
+                      @media (prefers-reduced-motion: reduce) {
+                        .LP_BlackFriday_KV_kv * { animation: none !important; }
+                        .LP_BlackFriday_KV_sl1 { opacity: 1; visibility: visible; }
+                        .LP_BlackFriday_KV_tabs .LP_BlackFriday_KV_t1 { color: #000000; background: #ffffff; }
+                      }
+                      /* Cupom exclusivo do slide de seminovos */
+                      .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_coupon {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .45cqw;
+                        width: 100%;
+                        font-size: max(11px, 1.30cqw);
+                        line-height: 1.2;
+                        font-weight: 500;
+                        color: #ffffff;
+                      }
+                      .LP_BlackFriday_KV_coupon span {
+                        display: inline-block;
+                        border: 1.5px dashed #ffffff;
+                        border-radius: .65cqw;
+                        padding: .45cqw .7cqw;
+                        font-weight: 700;
+                        white-space: nowrap;
+                      }
+                      .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_lb { margin-top: .85cqw; }
+                      .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_pr { font-size: 4.5cqw; }
+                      .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_pr small { font-size: 2.65cqw; }
+                      @container (max-width: 767px) {
+                        .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_coupon {
+                          font-size: max(10px, 2.8cqw);
+                          gap: .9cqw;
+                        }
+                        .LP_BlackFriday_KV_coupon span {
+                          padding: .7cqw 1.4cqw;
+                          border-radius: 1.5cqw;
+                        }
+                        .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_lb { margin-top: 1.5cqw; }
+                        .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_pr { font-size: 8.5cqw; }
+                        .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_pr small { font-size: 5cqw; }
+                        .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_chips { margin-top: 1.5cqw; }
+                        .LP_BlackFriday_KV_sl2 .LP_BlackFriday_KV_cta { margin-top: 2cqw; }
+                      }
+                    </style>
+                    
+                
+        <div class="LP_BlackFriday_KV_page" id="LP_BlackFriday_KV_page">
+                              
+                        
+            <div class="LP_BlackFriday_KV_pg">
+                                        
+                                
+                <div class="LP_BlackFriday_KV_kv">
+                                                  
+                                        
+                    <div class="LP_BlackFriday_KV_row">
+                                                            <!-- ===== ESQUERDA: logo, frete e Aproveite ===== -->
+                                                            
+                                                
+                        <div class="LP_BlackFriday_KV_left">
+                                                                      <a class="LP_BlackFriday_KV_logo" id="LP_BlackFriday_KV_logo_link" data-ga4-event="LP_BlackFriday_KV_logo_link" href="https://www.iplace.com.br/black-friday?origem_clique=home_black_friday_26" aria-label="Black Friday iPlace: ver todas as ofertas">
+                                                        <svg class="LP_BlackFriday_KV_lgb" aria-hidden="true" viewBox="0 0 1064 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M82.69 7.425C116.82 7.425 138.02 24.535 138.02 52.095V52.355C138.02 71.485 123.5 87.955 104.24 90.675C102.55 90.915 101.28 92.375 101.28 94.075C101.28 95.775 102.67 97.355 104.44 97.505C129.4 99.535 146.84 117.025 146.84 140.045V140.305C146.84 155.735 141.12 168.615 130.29 177.545C119.28 186.625 103.32 191.425 84.14 191.425H33.86C16.85 191.425 3.01 177.585 3.01 160.575V36.095C3.01 20.285 15.87 7.425 31.68 7.425H82.7M82.69 4.425H31.67C14.18 4.425 0 18.605 0 36.095V160.575C0 179.275 15.16 194.425 33.85 194.425H84.13C124.68 194.425 149.83 173.625 149.83 140.305V140.045C149.83 115.285 130.93 96.655 104.68 94.515C104.45 94.495 104.27 94.305 104.27 94.075C104.27 93.845 104.43 93.675 104.65 93.635C125.4 90.705 141.01 73.025 141.01 52.345V52.085C141.01 22.855 118.49 4.425 82.68 4.425H82.69Z" fill="#ffffff"></path>
+                                                        <path d="M209.25 7.425V161.195C209.25 163.095 210.79 164.635 212.69 164.635H292.33V191.425H175.48V7.425H209.25ZM211.8 4.425H172.92C172.68 4.425 172.48 4.625 172.48 4.865V193.985C172.48 194.225 172.68 194.425 172.92 194.425H294.88C295.12 194.425 295.32 194.225 295.32 193.985V162.085C295.32 161.845 295.12 161.645 294.88 161.645H212.68C212.43 161.645 212.24 161.445 212.24 161.205V4.865C212.24 4.625 212.04 4.425 211.8 4.425Z" fill="#ffffff"></path>
+                                                        <path d="M400.74 7.425C410.92 7.425 420.01 13.885 423.36 23.495L481.9 191.425H446.59L432.99 147.755C432.54 146.305 431.22 145.335 429.7 145.335H363.2C361.68 145.335 360.36 146.305 359.91 147.755L346.31 191.425H311L369.76 23.195C373.06 13.755 381.99 7.415 391.98 7.415H400.73M400.74 4.425H391.99C380.71 4.425 370.66 11.565 366.94 22.215L307 193.835C306.9 194.125 307.11 194.425 307.42 194.425H348.21C348.4 194.425 348.58 194.295 348.63 194.115L362.79 148.655C362.85 148.465 363.02 148.345 363.21 148.345H429.71C429.9 148.345 430.08 148.475 430.13 148.655L444.29 194.115C444.35 194.305 444.52 194.425 444.71 194.425H485.5C485.8 194.425 486.02 194.125 485.92 193.835L426.2 22.505C422.43 11.675 412.21 4.425 400.75 4.425H400.74Z" fill="#ffffff"></path>
+                                                        <path d="M580.92 4.135C602.62 4.135 621.76 10.665 636.29 23.005C649.82 34.505 658.38 50.675 660.54 68.715H627.54C622.55 45.625 605.13 31.845 580.92 31.845C548.78 31.845 528.02 58.245 528.02 99.095V99.225C528.02 140.405 548.79 167.005 580.92 167.005C604.96 167.005 621.96 153.535 627.71 130.005H660.7C658.59 148.395 650.19 164.245 636.31 175.955C621.76 188.235 602.61 194.715 580.92 194.715C554.43 194.715 532.34 185.985 517.06 169.455C501.62 152.775 493.47 128.525 493.47 99.355V99.225C493.47 70.085 501.64 45.895 517.11 29.255C532.4 12.815 554.46 4.125 580.93 4.125M580.92 1.135C525.49 1.135 490.46 38.005 490.46 99.235V99.365C490.46 160.595 525.35 197.725 580.92 197.725C626.87 197.725 660.19 168.885 663.87 128.465L663.96 127.505C663.98 127.245 663.78 127.025 663.52 127.025H625.66C625.45 127.025 625.27 127.175 625.23 127.385L625.04 128.345C619.91 150.865 603.84 164.025 580.93 164.025C550.51 164.025 531.03 139.275 531.03 99.245V99.115C531.03 59.345 550.52 34.855 580.93 34.855C604.63 34.855 620.17 48.545 624.64 69.485L625.09 71.385C625.14 71.585 625.32 71.725 625.52 71.725H663.39C663.65 71.725 663.86 71.495 663.83 71.235L663.75 70.545C660.06 30.255 627.01 1.155 580.93 1.155L580.92 1.135Z" fill="#ffffff"></path>
+                                                        <path d="M836.77 7.425L772.88 86.155C771.92 87.335 771.85 89.025 772.71 90.275L842.24 191.435H802L748.85 113.055C748.21 112.105 747.14 111.545 746 111.545C744.96 111.545 743.98 112.015 743.32 112.825L726.02 134.225C725.53 134.835 725.26 135.605 725.26 136.385V191.425H691.49V7.425H725.26V90.885C725.26 92.785 726.8 94.325 728.7 94.325H728.97C730.02 94.325 731 93.855 731.66 93.035L800.27 7.425H836.78M842.14 4.425H799.04C798.91 4.425 798.78 4.485 798.69 4.595L729.3 91.165C729.22 91.265 729.09 91.335 728.95 91.335H728.68C728.44 91.335 728.24 91.135 728.24 90.895V4.865C728.24 4.625 728.04 4.425 727.8 4.425H688.92C688.68 4.425 688.48 4.625 688.48 4.865V193.985C688.48 194.225 688.68 194.425 688.92 194.425H727.8C728.04 194.425 728.24 194.225 728.24 193.985V136.385C728.24 136.285 728.28 136.185 728.34 136.105L745.64 114.705C745.73 114.595 745.86 114.545 745.98 114.545C746.12 114.545 746.26 114.615 746.35 114.735L800.26 194.235C800.34 194.355 800.48 194.425 800.63 194.425H847.09C847.45 194.425 847.66 194.025 847.46 193.735L775.18 88.575C775.07 88.415 775.08 88.195 775.2 88.045L842.48 5.145C842.72 4.855 842.51 4.425 842.14 4.425Z" fill="#ffffff"></path>
+                                                        <path d="M1031.41 11.245C1029.79 8.05502 1026.69 6.15502 1023.12 6.15502H1019.14C1014.79 6.15502 1010.66 8.25502 1008.1 11.765L949.01 92.795L887.38 177.205C885.51 179.765 885.26 182.975 886.69 185.795C888.12 188.615 890.87 190.305 894.03 190.305H900.01C904.5 190.305 908.75 188.145 911.39 184.515L972.29 100.965L1030.64 20.945C1032.75 18.055 1033.04 14.435 1031.42 11.245H1031.41Z" stroke-width="2.27" stroke-miterlimit="10" stroke="#ffffff"></path>
+                                                        <path d="M931.76 85.555C939.34 76.945 943.35 64.625 943.35 49.945C943.35 35.265 939.34 23.015 931.76 14.385C924.15 5.715 913.28 1.135 900.33 1.135C887.38 1.135 876.58 5.715 868.95 14.385C865.89 17.855 863.43 21.925 861.56 26.485H863.03C869.39 11.335 882.52 2.565 900.34 2.565C926 2.565 941.94 20.725 941.94 49.945C941.94 79.165 926 97.325 900.34 97.325C882.52 97.325 869.39 88.555 863.03 73.405H861.54C863.41 77.985 865.89 82.075 868.95 85.545C876.57 94.175 887.42 98.745 900.33 98.745C913.24 98.745 924.16 94.185 931.76 85.545V85.555Z" fill="#c4d200" stroke-width="2.27" stroke-miterlimit="10" stroke="#ffffff"></path>
+                                                        <path d="M1031.79 21.785C1034.18 18.505 1034.52 14.225 1032.68 10.605C1030.84 6.98498 1027.18 4.73498 1023.12 4.73498H1019.14C1014.34 4.73498 1009.78 7.05498 1006.95 10.935L947.86 91.965L886.23 176.375C884.07 179.325 883.76 183.185 885.42 186.445C887.08 189.705 890.38 191.725 894.03 191.725H900.01C904.95 191.725 909.63 189.345 912.54 185.355L973.44 101.805L1031.79 21.785ZM911.39 184.515C908.75 188.135 904.49 190.305 900.01 190.305H894.03C890.87 190.305 888.12 188.625 886.69 185.795C885.26 182.975 885.51 179.765 887.38 177.205L949.01 92.795L1008.1 11.765C1010.66 8.25498 1014.79 6.15498 1019.14 6.15498H1023.12C1026.69 6.15498 1029.79 8.05498 1031.41 11.245C1033.03 14.435 1032.74 18.055 1030.63 20.945L972.28 100.965L911.38 184.515H911.39Z" fill="#c4d200" stroke-width="2.27" stroke-miterlimit="10" stroke="#ffffff"></path>
+                                                        <path d="M1050.33 109.935C1042.72 101.265 1031.85 96.685 1018.9 96.685C1005.95 96.685 995.15 101.265 987.52 109.935C984.45 113.425 981.97 117.505 980.1 122.095H981.57C987.92 106.905 1001.06 98.115 1018.91 98.115C1044.57 98.115 1060.51 116.275 1060.51 145.495C1060.51 174.715 1044.57 193.005 1018.91 193.005C1001.09 193.005 987.96 184.215 981.6 169.025H980.13C982 173.605 984.47 177.685 987.53 181.165C995.15 189.845 1006.01 194.425 1018.91 194.425C1031.81 194.425 1042.73 189.835 1050.34 181.165C1057.92 172.515 1061.93 160.185 1061.93 145.495C1061.93 130.805 1057.92 118.565 1050.34 109.935H1050.33Z" fill="#c4d200" stroke-width="2.27" stroke-miterlimit="10" stroke="#ffffff"></path>
+                                                        </svg>
+                                                        <svg class="LP_BlackFriday_KV_lgf" aria-hidden="true" viewBox="0 0 1065 186" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M248.51 2.40997H330.95C331.45 2.40997 331.86 2.81996 331.86 3.31996V32.77C331.86 33.27 331.45 33.68 330.95 33.68H259.86C255.04 33.68 251.13 37.59 251.13 42.41V81.36C251.13 81.86 251.54 82.27 252.04 82.27H323.92C324.42 82.27 324.83 82.68 324.83 83.18V111.37C324.83 111.87 324.42 112.28 323.92 112.28H252.04C251.54 112.28 251.13 112.69 251.13 113.19V182.69C251.13 183.19 250.72 183.6 250.22 183.6H214.12C213.62 183.6 213.21 183.19 213.21 182.69V37.73C213.21 18.24 229.01 2.43997 248.5 2.43997L248.51 2.40997Z" fill="#c4d200"></path>
+                                                        <path d="M354.2 32.93C354.2 16.07 367.87 2.39996 384.73 2.39996H429.03C469.71 2.39996 493.81 23.99 493.81 60.4V60.65C493.81 84.32 481.32 104.04 461.5 112.07C461.26 112.17 461.15 112.45 461.28 112.68L498.87 182.91C499.03 183.2 498.81 183.56 498.48 183.56H456.55C456.38 183.56 456.23 183.47 456.16 183.32L422.63 118.14C422.55 117.99 422.4 117.9 422.24 117.9H392.57C392.33 117.9 392.13 118.1 392.13 118.34V183.12C392.13 183.36 391.93 183.56 391.69 183.56H354.66C354.42 183.56 354.22 183.36 354.22 183.12V32.93H354.2Z" fill="#c4d200"></path>
+                                                        <path d="M519.23 2.40997H556.26C556.5 2.40997 556.7 2.60996 556.7 2.84996V183.13C556.7 183.37 556.5 183.57 556.26 183.57H519.23C518.99 183.57 518.79 183.37 518.79 183.13V2.84996C518.79 2.60996 518.99 2.40997 519.23 2.40997Z" fill="#c4d200"></path>
+                                                        <path d="M586.83 2.84996C586.83 2.60996 587.03 2.40997 587.27 2.40997H656C710.24 2.40997 742.37 34.68 742.37 92.05V92.3C742.37 149.8 710.36 183.57 656 183.57H587.27C587.03 183.57 586.83 183.37 586.83 183.13V2.84996Z" fill="#c4d200"></path>
+                                                        <path d="M825.89 2.40997H840.58C849.58 2.40997 857.6 8.10997 860.56 16.61L918.56 182.99C918.66 183.28 918.45 183.58 918.14 183.58H879.29C879.1 183.58 878.93 183.45 878.87 183.27L865.38 139.95C865.32 139.77 865.15 139.64 864.96 139.64H801.58C801.39 139.64 801.22 139.77 801.16 139.95L787.67 183.27C787.61 183.45 787.44 183.58 787.25 183.58H748.4C748.1 183.58 747.88 183.28 747.98 182.99L806.15 16.43C809.08 8.03996 817 2.40997 825.89 2.40997Z" fill="#c4d200"></path>
+                                                        <path d="M963.65 115.8L901.05 3.05997C900.89 2.76997 901.1 2.40997 901.44 2.40997H941.35C941.51 2.40997 941.66 2.49996 941.74 2.64996L982.17 79.51C982.25 79.65 982.4 79.75 982.56 79.75H982.91C983.07 79.75 983.22 79.66 983.3 79.51L1023.6 2.64996C1023.68 2.49996 1023.83 2.40997 1023.99 2.40997H1064.03C1064.37 2.40997 1064.58 2.76996 1064.42 3.06996L1001.69 115.81C1001.65 115.88 1001.63 115.95 1001.63 116.02V183.13C1001.63 183.37 1001.43 183.57 1001.19 183.57H964.16C963.92 183.57 963.72 183.37 963.72 183.13V116.02C963.72 115.95 963.7 115.87 963.66 115.81L963.65 115.8Z" fill="#c4d200"></path>
+                                                        <path d="M5.09 70.32C2.28 70.32 0 72.6 0 75.41C0 78.22 2.28 80.5 5.09 80.5C7.9 80.5 10.18 78.22 10.18 75.41C10.18 72.6 7.9 70.32 5.09 70.32Z" fill="#ffffff"></path>
+                                                        <path d="M9.56021 82.83H0.720215V114.68H9.56021V82.83Z" fill="#ffffff"></path>
+                                                        <path d="M39.6002 89.32C38.9102 89.82 38.1602 90.18 37.3502 90.4C36.5202 90.62 35.7002 90.74 34.9102 90.74H26.2102V77.69H35.0302C35.9902 77.69 36.9002 77.79 37.7402 77.98C38.5402 78.16 39.2502 78.5 39.8602 78.98C40.4602 79.46 40.9502 80.12 41.3202 80.95C41.6902 81.81 41.8702 82.9 41.8702 84.22C41.8702 85.54 41.6602 86.54 41.2402 87.36C40.8202 88.18 40.2702 88.84 39.6102 89.32M47.7802 75.2C46.6802 73.81 45.1002 72.63 43.0802 71.7C41.0802 70.78 38.4702 70.31 35.3402 70.31H17.4502V114.67H26.2102V98.11H35.3402C38.4802 98.11 41.0802 97.65 43.0802 96.76C45.1002 95.86 46.6802 94.69 47.7802 93.29C48.8802 91.9 49.6402 90.37 50.0402 88.74C50.4302 87.15 50.6302 85.65 50.6302 84.27C50.6302 82.89 50.4302 81.39 50.0402 79.78C49.6402 78.13 48.8802 76.59 47.7802 75.2Z" fill="#ffffff"></path>
+                                                        <path d="M63.4198 70.32H55.3198V114.68H63.4198V70.32Z" fill="#ffffff"></path>
+                                                        <path d="M117.61 108.16C112.48 108.16 109.53 104.23 109.53 97.38C109.53 90.53 112.55 86.63 117.61 86.63C121.66 86.63 124.4 89.24 125.32 93.77H133.09C131.82 85.37 126.03 80.12 117.62 80.12C108.04 80.12 101.85 86.9 101.85 97.38C101.85 107.86 108.04 114.68 117.62 114.68C125.3 114.68 130.66 110.52 132.57 103.51H124.58C123.3 106.51 120.91 108.16 117.61 108.16Z" fill="#ffffff"></path>
+                                                        <path d="M153.52 86.62C157.57 86.62 160.31 89.23 161.22 93.75H145.78C146.7 89.23 149.45 86.62 153.52 86.62ZM153.52 108.16C148.99 108.16 146.17 105.09 145.57 99.67H169.15C169.22 98.93 169.26 98.17 169.26 97.38C169.26 86.89 163.08 80.12 153.52 80.12C143.96 80.12 137.75 86.9 137.75 97.38C137.75 107.86 143.94 114.68 153.52 114.68C161.2 114.68 166.56 110.52 168.47 103.51H160.48C159.2 106.52 156.82 108.16 153.52 108.16Z" fill="#ffffff"></path>
+                                                        <path d="M88.4402 0.0200043C50.5502 0.0200043 17.0502 23.03 2.74021 55.84L1.16021 59.77H10.7202C11.3702 58.45 12.5602 55.82 12.5602 55.82C26.2502 28.09 55.5902 8.95999 88.4402 8.95999C134.58 8.95999 178.09 47.86 178.09 94.19C178.09 140.52 134.57 177.01 88.4402 177.01C53.9202 177.01 23.0802 155.87 10.3102 125.84L0.720215 125.87C13.9802 160.94 48.9202 185.95 88.4402 185.95C139.49 185.95 180.2 145.44 181.02 94.18C181.84 42.74 139.49 0 88.4402 0" fill="#C7D300"></path>
+                                                        <path d="M89.03 102.64C89.03 103.6 88.8 104.41 88.35 105.05C87.87 105.73 87.27 106.3 86.56 106.74C85.83 107.19 85.04 107.51 84.22 107.7C82.71 108.04 81.53 108.08 79.93 107.81C79.24 107.7 78.6 107.5 78.03 107.22C77.48 106.96 77.01 106.59 76.62 106.13C76.27 105.71 76.1 105.21 76.1 104.58C76.1 103.79 76.23 103.11 76.49 102.57C76.75 102.04 77.11 101.6 77.54 101.28C78.02 100.93 78.57 100.66 79.19 100.46C79.85 100.24 80.54 100.08 81.24 99.96C82.74 99.68 84.28 99.47 85.8 99.33C87 99.22 88.08 98.94 89.02 98.51V102.64H89.03ZM97.16 91.38C97.16 91.33 97.16 91.29 97.16 91.24V90.07C97.16 90.01 97.16 89.96 97.16 89.9C97.16 89.78 97.14 89.67 97.14 89.56C97.14 89.5 97.14 89.45 97.13 89.39C96.77 84.22 91.06 80.09 84.03 80.02H83.55C83.18 80.02 82.82 80.05 82.46 80.09C75.29 80.63 69.61 85.59 69.16 91.75C69.09 92.24 69.09 92.53 69.09 92.53H77.2L77.25 91.47C77.39 89.95 78 88.87 79.1 88.16C80.67 87.15 82.88 86.82 85.67 87.19C86.37 87.28 87.01 87.47 87.58 87.74C88.12 88 88.57 88.38 88.94 88.86C89.29 89.32 89.46 89.91 89.46 90.68C89.46 91.52 89.26 92.14 88.88 92.53C88.45 92.96 87.85 93.28 87.09 93.5C86.25 93.73 85.28 93.89 84.2 94C83.04 94.1 81.81 94.28 80.6 94.51C79.12 94.68 77.64 94.92 76.2 95.22C74.71 95.53 73.34 96.06 72.13 96.78C70.89 97.52 69.88 98.55 69.12 99.85C68.36 101.15 67.98 102.85 67.98 104.89C67.98 106.52 68.3 107.96 68.93 109.2C69.56 110.43 70.41 111.47 71.47 112.26C72.51 113.05 73.73 113.65 75.09 114.05C76.43 114.45 77.86 114.65 79.33 114.65C81.25 114.65 83.41 114.72 85.45 114.1C85.45 114.1 88.35 113.46 89.59 112.5V114.64H97.18V94.13V91.38H97.16Z" fill="#ffffff"></path>
+                                                        </svg>
+                                                                      </a>
+                                                                      <a class="LP_BlackFriday_KV_frete" id="LP_BlackFriday_KV_frete_link" data-ga4-event="LP_BlackFriday_KV_frete_link" href="https://www.iplace.com.br/black-friday?origem_clique=home_black_friday_26" aria-label="Frete grátis em pedidos acima de R$ 1000: ver ofertas da Black Friday">
+                                                        <svg class="LP_BlackFriday_KV_ic_frete" aria-hidden="true" width="41.918" height="31.1922" viewBox="0 0 41.918 31.1922" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                        <path d="M41.9062 19.5657C41.9846 18.8533 41.6647 17.5615 41.1516 17.0303L35.0908 10.728L29.5371 10.4322L29.3318 6.62312C29.1809 3.82212 26.736 3.56858 24.6353 3.66517C19.9629 3.88249 15.4717 3.89455 9.13929 3.70741H8.88565C7.38253 3.64705 4.59965 3.55047 4.51514 5.67536C4.29178 11.3739 4.27982 17.5313 4.48507 25.059C4.49714 25.56 4.76277 26.0007 5.25778 26.375C6.18742 27.0632 7.66024 27.3046 8.45708 27.0873L8.74078 27.0149L8.79516 27.3046C9.25998 29.7193 10.8899 31.1862 13.0812 31.1862C13.1537 31.1862 13.2321 31.1862 13.3106 31.1862C15.2785 31.0896 16.9083 29.4959 17.186 27.4073L17.2162 27.1658H17.2827L28.4686 27.196L28.5047 27.4254C28.8307 29.6408 30.527 31.1922 32.6278 31.1922H32.7003C34.8373 31.156 36.4551 29.6891 36.7388 27.5461L36.769 27.3227L39.7088 27.1235C41.9544 26.9666 41.9121 25.5661 41.8337 23.0246C41.8035 22.0105 41.7673 20.8696 41.8941 19.6502V19.5657H41.9062ZM13.0269 30.1901C11.3064 30.1901 9.90596 28.7896 9.90596 27.0752C9.90596 25.3608 11.3064 23.9603 13.0269 23.9603C14.7473 23.9603 16.1477 25.3608 16.1477 27.0752C16.1477 28.7896 14.7473 30.1901 13.0269 30.1901ZM28.3117 26.1758L17.1197 26.1879L17.0593 26.0067C16.4435 24.2803 15.0552 23.1514 13.3468 22.9884C11.2521 22.7953 10.1172 24.1173 8.94608 25.7351C8.70461 26.0611 8.30614 26.2422 7.82924 26.2422C7.58778 26.2422 7.32834 26.1999 7.06273 26.1154C6.11497 25.8075 5.11276 24.9443 5.11276 23.9543L5.09478 7.08189C5.09478 6.44804 5.38443 5.7961 5.89151 5.28298C6.38047 4.79402 7.01439 4.5103 7.62409 4.5103H25.8184C27.1888 4.5103 28.3901 5.6995 28.3901 7.06378V26.1758H28.3117ZM32.652 30.1962C30.9315 30.1962 29.5311 28.8017 29.5311 27.0873C29.5311 25.3729 30.9315 23.9784 32.652 23.9784C34.3724 23.9784 35.7668 25.3729 35.7668 27.0873C35.7668 28.8017 34.3664 30.1962 32.652 30.1962ZM40.9946 18.4127L40.9403 25.7592L40.747 25.8136C40.0166 26.0249 39.0326 26.1516 38.1633 26.1516C37.608 26.1516 37.1252 26.0973 36.769 26.0007L36.6483 25.9645L36.5939 25.8619C35.8091 24.3708 34.9277 23.4714 33.9679 23.1816C32.7002 22.7953 31.4205 23.0126 29.8269 23.8819L29.4223 24.1052V23.9724L29.4646 11.5731L34.5776 11.6033L34.6018 11.6275L40.9946 18.3825V18.4127Z" fill="#ffffff"></path>
+                                                        <g>
+                                                        <g>
+                                                        <path d="M10.5759 20.2466C9.26597 20.2466 8.01039 19.9931 6.83928 19.492C5.68025 18.991 4.64189 18.2907 3.76054 17.4094C2.87919 16.528 2.17896 15.4958 1.67189 14.3367C1.16481 13.1656 0.905221 11.904 0.905221 10.5759C0.905221 9.24785 1.16481 7.98619 1.67189 6.82112C2.17896 5.67416 2.87919 4.63586 3.76054 3.74847C4.64189 2.86109 5.68025 2.1548 6.83928 1.6598C8.00435 1.15876 9.26597 0.90522 10.5759 0.90522C11.8859 0.90522 13.1717 1.15876 14.3367 1.6598C15.4958 2.1548 16.5281 2.85504 17.4155 3.74243C18.3029 4.62981 18.997 5.65605 19.492 6.82112C19.9931 7.98619 20.2466 9.24785 20.2466 10.5759C20.2466 11.904 19.9931 13.1475 19.486 14.3186C18.9789 15.4777 18.2727 16.5099 17.3853 17.3973C16.4979 18.2726 15.4597 18.9789 14.3067 19.4799C13.1356 19.987 11.8859 20.2466 10.5759 20.2466Z" fill="#c4d200"></path>
+                                                        <path d="M10.5762 1.81099C11.7875 1.81099 12.9205 2.03837 13.9749 2.49313C15.0293 2.94789 15.9629 3.5777 16.7758 4.38259C17.5888 5.18747 18.2187 6.11913 18.6654 7.17755C19.1121 8.23597 19.3374 9.36885 19.3414 10.5762C19.3454 11.7835 19.1161 12.9103 18.6533 13.9567C18.1905 15.003 17.5545 15.9347 16.7456 16.7517C15.9367 17.5686 15.0031 18.2025 13.9447 18.6532C12.8863 19.1039 11.7634 19.3333 10.5762 19.3414C9.38899 19.3494 8.26224 19.1221 7.19577 18.6592C6.1293 18.1964 5.19757 17.5666 4.40073 16.7698C3.6039 15.9729 2.97213 15.0413 2.50529 13.9748C2.03846 12.9083 1.80697 11.7755 1.81099 10.5762C1.81502 9.3769 2.04651 8.24604 2.50529 7.18359C2.96408 6.12115 3.59585 5.18949 4.40073 4.38863C5.20562 3.58777 6.13735 2.95594 7.19577 2.49313C8.25419 2.03032 9.38094 1.80294 10.5762 1.81099ZM10.5762 0C9.13948 0 7.76311 0.277682 6.48334 0.827016C5.21565 1.37031 4.08086 2.14301 3.115 3.11491C2.15517 4.08077 1.39455 5.20357 0.845218 6.45919C0.28381 7.73896 0 9.12135 0 10.5762C0 12.031 0.28381 13.4134 0.845218 14.6992C1.39455 15.9609 2.16122 17.0897 3.12104 18.0495C4.0869 19.0154 5.21565 19.782 6.48334 20.3253C7.76311 20.8747 9.13948 21.1524 10.5762 21.1524C12.0129 21.1524 13.3832 20.8686 14.663 20.3133C15.9247 19.7639 17.0536 18.9973 18.0255 18.0375C18.9913 17.0716 19.764 15.9428 20.3134 14.6811C20.8748 13.3953 21.1524 12.0189 21.1524 10.5762C21.1524 9.13342 20.8748 7.73896 20.3255 6.45919C19.7822 5.19753 19.0215 4.06265 18.0557 3.10282C17.0898 2.13696 15.9609 1.37031 14.6932 0.827016C13.4135 0.277682 12.025 0 10.5762 0Z" fill="#000000"></path>
+                                                        </g>
+                                                        <path d="M9.52508 15.732C9.38825 15.732 9.23935 15.7039 9.07838 15.6475C8.9174 15.5912 8.77859 15.4986 8.66188 15.3698L5.34778 11.7297C5.29143 11.6613 5.24315 11.5607 5.2029 11.4279C5.16266 11.2951 5.14248 11.1663 5.14248 11.0416C5.14248 10.7317 5.24511 10.4721 5.45035 10.2629C5.65962 10.0576 5.91317 9.95498 6.21097 9.95498C6.3961 9.95498 6.5571 9.99321 6.69393 10.0697C6.83479 10.1421 6.94953 10.2307 7.03806 10.3353L9.48883 12.9733L14.0284 6.65898C14.2578 6.33702 14.5636 6.17604 14.946 6.17604C15.2317 6.17604 15.4832 6.27866 15.7005 6.48391C15.9219 6.69318 16.0326 6.94672 16.0326 7.24453C16.0326 7.33709 16.0126 7.44172 15.9723 7.55843C15.9321 7.67111 15.8717 7.78582 15.7912 7.90252L10.4427 15.3397C10.2455 15.6013 9.9396 15.732 9.52508 15.732Z" fill="#000000"></path>
+                                                        </g>
+                                                        <path d="M32.1507 18.5943L38.3926 18.4977L34.4024 13.94C34.0885 13.5838 32.6819 13.5718 32.0179 13.7046L32.1507 18.5943Z" fill="#ffffff"></path>
+                                                        </g>
+                                                        </svg>
+                                                                        <span class="LP_BlackFriday_KV_frete_t">Frete grátis</span>
+                                                                        <span class="LP_BlackFriday_KV_frete_s">em pedidos acima de R$ 1000</span>
+                                                                      </a>
+                                                                      <a class="LP_BlackFriday_KV_apv" id="LP_BlackFriday_KV_aproveite" data-ga4-event="LP_BlackFriday_KV_aproveite" href="https://www.iplace.com.br/black-friday?origem_clique=home_black_friday_26" aria-label="Aproveite: ver todas as ofertas da Black Friday iPlace">
+                                                        <svg class="LP_BlackFriday_KV_ic_aproveite" aria-hidden="true" width="124.624" height="23.8382" viewBox="0 0 124.624 23.8382" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                        <g>
+                                                        <path d="M5.78081 3.29598H9.84755L15.6187 19.8414H11.9841L10.731 15.8323H4.88296L3.63461 19.8414H0L5.78081 3.29598Z" fill="#000000"></path>
+                                                        <path d="M17.314 3.29598H23.9638C27.4496 3.29598 29.7783 5.5478 29.7783 8.95195V8.97595C29.7783 12.3801 27.4496 14.6271 23.9638 14.6271H20.7758V19.8414H17.314V3.29598Z" fill="#000000"></path>
+                                                        <path d="M31.8136 3.29598H38.6507C42.3621 3.29598 44.5659 5.26932 44.5659 8.59664V8.62066C44.5659 10.7957 43.4088 12.6106 41.5699 13.3308L45.0557 19.8414H41.1378L38.0505 13.8445H35.2753V19.8414H31.8136V3.29598Z" fill="#000000"></path>
+                                                        <path d="M46.328 11.5774V11.5534C46.328 6.29109 49.4153 3.01178 54.3079 3.01178C59.2004 3.01178 62.2877 6.3007 62.2877 11.5534V11.5774C62.2877 16.8396 59.2292 20.1286 54.3079 20.1286C49.3865 20.1286 46.328 16.8396 46.328 11.5774Z" fill="#000000"></path>
+                                                        <path d="M62.8833 3.29598H66.7148L70.4982 16.298H70.5654L74.3393 3.29598H78.1804L72.6396 19.8414H68.4241L62.8833 3.29598Z" fill="#000000"></path>
+                                                        <path d="M79.8607 3.29598H90.8221V6.15276H83.3273V10.1187H90.3996V12.8266H83.3273V16.9894H90.8221V19.8414H79.8607V3.29598Z" fill="#000000"></path>
+                                                        <path d="M93.3231 3.29598H96.7849V19.8414H93.3231V3.29598Z" fill="#000000"></path>
+                                                        <path d="M103.493 6.15276H98.7106V3.29598H111.746V6.15276H106.955V19.8414H103.493V6.15276Z" fill="#000000"></path>
+                                                        <path d="M113.662 3.29598H124.624V6.15276H117.124V10.1187H124.196V12.8266H117.124V16.9894H124.624V19.8414H113.662V3.29598Z" fill="#000000"></path>
+                                                        </g>
+                                                        <path d="M46.9899 13.2054C46.9899 13.407 47.0587 13.575 47.1964 13.7095C47.334 13.8439 47.5133 13.9111 47.7341 13.9111H53.6062L50.5093 22.3279C50.4069 22.5968 50.3877 22.8288 50.4517 23.0241C50.5189 23.2193 50.6341 23.3602 50.7974 23.4466C50.9606 23.533 51.1431 23.549 51.3447 23.4946C51.5496 23.4434 51.7384 23.3106 51.9113 23.0961L61.3603 11.2944C61.5396 11.064 61.6292 10.8415 61.6292 10.627C61.6292 10.4254 61.5604 10.2573 61.4227 10.1229C61.2819 9.98847 61.101 9.92124 60.8802 9.92124H55.0081L58.105 1.5045C58.2106 1.24203 58.2298 1.01317 58.1626 0.817911C58.0986 0.622656 57.985 0.481815 57.8217 0.395391C57.6585 0.308967 57.4744 0.289764 57.2696 0.337777C57.0647 0.388991 56.8759 0.525018 56.703 0.745879L47.2588 12.538C47.0795 12.7748 46.9899 12.9973 46.9899 13.2054Z" fill="#c4d200" stroke-width="0.624174" stroke-miterlimit="10" stroke="#000000"></path>
+                                                        </g>
+                                                        </svg>
+                                                                      </a>
+                                                                    
+                                                    
+                        </div>
+                                                            <!-- ===== DIREITA: card com ofertas rotativas (4 x 2 s) ===== -->
+                                                            
+                                                
+                        <div class="LP_BlackFriday_KV_card">
+                                                                      
+                                                        
+                            <nav class="LP_BlackFriday_KV_tabs" aria-label="Ofertas">
+                                                                                <a class="LP_BlackFriday_KV_t1" id="LP_BlackFriday_KV_tab_1" data-ga4-event="LP_BlackFriday_KV_tab_1" href="https://www.iplace.com.br/iphone-18-pro/101100PR?skuId=100085942&amp;origem_clique=home_black_friday_26" aria-label="Ver oferta do iPhone 18 Pro" onclick="document.getAnimations().forEach(function(a){if(a.animationName=='LP_BlackFriday_KV_sl'||a.animationName=='LP_BlackFriday_KV_tb')a.currentTime=300});return false">iPhone 18 Pro</a>
+                                                                                <a class="LP_BlackFriday_KV_t2" id="LP_BlackFriday_KV_tab_2" data-ga4-event="LP_BlackFriday_KV_tab_2" href="https://www.iplace.com.br/ofertas/usados/cat211480338?origem_clique=home_black_friday_26" aria-label="Ver oferta de Seminovos" onclick="document.getAnimations().forEach(function(a){if(a.animationName=='LP_BlackFriday_KV_sl'||a.animationName=='LP_BlackFriday_KV_tb')a.currentTime=2300});return false">Seminovos</a>
+                                                                                <a class="LP_BlackFriday_KV_t3" id="LP_BlackFriday_KV_tab_3" data-ga4-event="LP_BlackFriday_KV_tab_3" href="https://www.iplace.com.br/apple-ipad-a16-2025/100057PR?skuId=100060982&amp;origem_clique=home_black_friday_26" aria-label="Ver oferta do iPad A16" onclick="document.getAnimations().forEach(function(a){if(a.animationName=='LP_BlackFriday_KV_sl'||a.animationName=='LP_BlackFriday_KV_tb')a.currentTime=4300});return false">iPad</a>
+                                                                                <a class="LP_BlackFriday_KV_t4" id="LP_BlackFriday_KV_tab_4" data-ga4-event="LP_BlackFriday_KV_tab_4" href="https://www.iplace.com.br/macbook-air-13-m5/100681PR?origem_clique=home_black_friday_26" aria-label="Ver oferta do MacBook Air 13&quot; M5" onclick="document.getAnimations().forEach(function(a){if(a.animationName=='LP_BlackFriday_KV_sl'||a.animationName=='LP_BlackFriday_KV_tb')a.currentTime=6300});return false">Mac</a>
+                                                                              
+                                                            
+                            </nav>
+                                                                      
+                                                        
+                            <div class="LP_BlackFriday_KV_sw">
+                                                                                <!-- 1. iPhone 18 Pro -->
+                                                                                
+                                                                
+                                <div class="LP_BlackFriday_KV_sl LP_BlackFriday_KV_sl1">
+                                                                                          <a class="LP_BlackFriday_KV_ph" id="LP_BlackFriday_KV_img_1" data-ga4-event="LP_BlackFriday_KV_img_1" href="https://www.iplace.com.br/iphone-18-pro/101100PR?skuId=100085942&amp;origem_clique=home_black_friday_26" tabindex="-1" aria-label="Ver iPhone 18 Pro"><img src="https://www.iplace.com.br/file/general/iplace-231126-home_kv_iphone.png" alt="iPhone 18 Pro" width="300" height="300"></a>
+                                                                                          
+                                                                        
+                                    <div class="LP_BlackFriday_KV_tx">
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_nm">
+                                                                                        iPhone 18 Pro
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_lb">
+                                                                                        a partir de
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_pr">
+                                                                                        <small>R$ </small>10.799
+                                                                                    
+                                        </p>
+                                                                                                    <a class="LP_BlackFriday_KV_cta" id="LP_BlackFriday_KV_cta_1" data-ga4-event="LP_BlackFriday_KV_cta_1" href="https://www.iplace.com.br/iphone-18-pro/101100PR?skuId=100085942&amp;origem_clique=home_black_friday_26" aria-label="Comprar agora iPhone 18 Pro">Comprar agora</a>
+                                                                                                  
+                                                                            
+                                    </div>
+                                                                                        
+                                                                    
+                                </div>
+                                                                                <!-- 2. Seminovos: cupom R$ 200 OFF (links das categorias) -->
+                                                                                
+                                                                
+                                <div class="LP_BlackFriday_KV_sl LP_BlackFriday_KV_sl2">
+                                                                                          <a class="LP_BlackFriday_KV_ph" id="LP_BlackFriday_KV_img_2" data-ga4-event="LP_BlackFriday_KV_img_2" href="https://www.iplace.com.br/ofertas/usados/cat211480338?origem_clique=home_black_friday_26" tabindex="-1" aria-label="Ver Seminovos"><img src="https://www.iplace.com.br/file/general/iplace-231126-home_kv_seminovos.png" alt="Apple Seminovos: iPhone, iPad e Apple Watch" width="300" height="300"></a>
+                                                                                          
+                                                                        
+                                    <div class="LP_BlackFriday_KV_tx">
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_coupon">
+                                            Use o cupom <span>SEMINOVO</span>
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_lb">
+                                            E ganhe mais
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_pr">
+                                                                                        <small>R$ </small>200 <small>OFF</small>
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <div class="LP_BlackFriday_KV_chips">
+                                                                                                              <a id="LP_BlackFriday_KV_chip_iphone" data-ga4-event="LP_BlackFriday_KV_chip_iphone" href="https://www.iplace.com.br/usados/iphone-seminovo/cat266380422?origem_clique=home_black_friday_26" aria-label="Ver iPhones seminovos">iPhone</a>
+                                                                                                              <a id="LP_BlackFriday_KV_chip_ipad" data-ga4-event="LP_BlackFriday_KV_chip_ipad" href="https://www.iplace.com.br/usados/ipad-seminovo/cat266380423?origem_clique=home_black_friday_26" aria-label="Ver iPads seminovos">iPad</a>
+                                                                                                              <a id="LP_BlackFriday_KV_chip_watch" data-ga4-event="LP_BlackFriday_KV_chip_watch" href="https://www.iplace.com.br/usados/apple-watch-seminovo/cat266380427?origem_clique=home_black_friday_26" aria-label="Ver Apple Watch seminovos">Watch</a>
+                                                                                                            
+                                                                                    
+                                        </div>
+                                                                                                    <a class="LP_BlackFriday_KV_cta" id="LP_BlackFriday_KV_cta_2" data-ga4-event="LP_BlackFriday_KV_cta_2" href="https://www.iplace.com.br/ofertas/usados/cat211480338?origem_clique=home_black_friday_26" aria-label="Comprar agora Seminovos com cupom SEMINOVO e ganhe mais R$ 200 OFF">Comprar agora</a>
+                                                                                                  
+                                                                            
+                                    </div>
+                                                                                        
+                                                                    
+                                </div>
+                                                                                <!-- 3. iPad A16 -->
+                                                                                
+                                                                
+                                <div class="LP_BlackFriday_KV_sl LP_BlackFriday_KV_sl3">
+                                                                                          <a class="LP_BlackFriday_KV_ph" id="LP_BlackFriday_KV_img_3" data-ga4-event="LP_BlackFriday_KV_img_3" href="https://www.iplace.com.br/apple-ipad-a16-2025/100057PR?skuId=100060982&amp;origem_clique=home_black_friday_26" tabindex="-1" aria-label="Ver iPad A16"><img src="https://www.iplace.com.br/file/general/iplace-231126-home_kv_ipad.png" alt="iPad A16" width="300" height="300"></a>
+                                                                                          
+                                                                        
+                                    <div class="LP_BlackFriday_KV_tx">
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_nm">
+                                                                                        iPad A16
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_lb">
+                                                                                        a partir de
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_pr">
+                                                                                        <small>R$ </small>4.669
+                                                                                    
+                                        </p>
+                                                                                                    <a class="LP_BlackFriday_KV_cta" id="LP_BlackFriday_KV_cta_3" data-ga4-event="LP_BlackFriday_KV_cta_3" href="https://www.iplace.com.br/apple-ipad-a16-2025/100057PR?skuId=100060982&amp;origem_clique=home_black_friday_26" aria-label="Comprar agora iPad A16">Comprar agora</a>
+                                                                                                  
+                                                                            
+                                    </div>
+                                                                                        
+                                                                    
+                                </div>
+                                                                                <!-- 4. MacBook Air 13&quot; M5 -->
+                                                                                
+                                                                
+                                <div class="LP_BlackFriday_KV_sl LP_BlackFriday_KV_sl4">
+                                                                                          <a class="LP_BlackFriday_KV_ph" id="LP_BlackFriday_KV_img_4" data-ga4-event="LP_BlackFriday_KV_img_4" href="https://www.iplace.com.br/macbook-air-13-m5/100681PR?origem_clique=home_black_friday_26" tabindex="-1" aria-label="Ver MacBook Air"><img src="https://www.iplace.com.br/file/general/iplace-241126-home-kv-mac-air.png" alt="MacBook Air 13&quot; M5" width="300" height="300"></a>
+                                                                                          
+                                                                        
+                                    <div class="LP_BlackFriday_KV_tx">
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_nm">
+                                                                                        MacBook Air
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_lb">
+                                                                                        a partir de
+                                                                                    
+                                        </p>
+                                                                                                    
+                                                                                
+                                        <p class="LP_BlackFriday_KV_pr">
+                                                                                        <small>R$ </small>13.379
+                                                                                    
+                                        </p>
+                                                                                                    <a class="LP_BlackFriday_KV_cta" id="LP_BlackFriday_KV_cta_4" data-ga4-event="LP_BlackFriday_KV_cta_4" href="https://www.iplace.com.br/macbook-air-13-m5/100681PR?origem_clique=home_black_friday_26" aria-label="Comprar agora MacBook Air 13&quot; M5">Comprar agora</a>
+                                                                                                  
+                                                                            
+                                    </div>
+                                                                                        
+                                                                    
+                                </div>
+                                                                              
+                                                            
+                            </div>
+                                                                    
+                                                    
+                        </div>
+                                                          
+                                            
+                    </div>
+                                                
+                                    
+                </div>
+                                      
+                            
+            </div>
+                            
+                    
+        </div>
+                  
+            
+    </div>
+</div>
+</body></html>

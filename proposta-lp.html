@@ -18,7 +18,7 @@
     <a href="emails-crm.html">E-mails · CRM</a>
     <a href="acoes.html">Ações</a>
     <a href="resultados.html">Resultados</a>
-    <a href="proposta-2026.html" class="active">Proposta 2026</a>
+    <a href="proposta-2026.html" class="active">Black 2026</a>
   </nav>
 </header>
 
@@ -26,6 +26,7 @@
   <aside class="phases" aria-label="Fases da Black Friday">
     <div class="label">Fases</div>
     <button data-phase="conteudo"><span class="dot"></span>Conteúdo · ano todo</button>
+    <button data-phase="aquece-1111"><span class="dot"></span>11.11 + Aquece</button>
     <button data-phase="aquece"><span class="dot"></span>Aquece Black</button>
     <button data-phase="black-friday"><span class="dot"></span>Black Friday</button>
   </aside>
@@ -59,11 +60,11 @@
 var mb = document.querySelector('.menu-btn');
 if (mb) mb.addEventListener('click', function () { document.querySelector('.nav').classList.toggle('open'); });
 
-// Fases e device da proposta de home (a home em si fica em home-2026.html, dentro do iframe)
+// Fases e device da proposta de LP (cada fase é uma página em lps2026/, dentro do iframe)
 (function () {
   var frame = document.getElementById('hframe');
   var iframe = frame.querySelector('iframe');
-  var paginas = { 'conteudo': 'lps2026/conteudo.html', 'aquece': 'lps2026/aquece.html', 'black-friday': 'lps2026/black-friday.html' };
+  var paginas = { 'conteudo': 'lps2026/conteudo.html', 'aquece-1111': 'lps2026/aquece-1111.html', 'aquece': 'lps2026/aquece.html', 'black-friday': 'lps2026/black-friday.html' };
 function setPhase(k) {    if (!paginas[k]) k = 'conteudo';    iframe.src = paginas[k];    document.querySelectorAll('.phases button').forEach(function (b) { b.classList.toggle('active', b.dataset.phase === k); });    history.replaceState(null, '', '#' + k);  }
   function setDevice(m) {
     frame.classList.toggle('mobile', m === 'mobile');

@@ -6,7 +6,7 @@ const IMG_HOSTED = 'https://www.iplace.com.br/file/general/' + IMG_PREFIX;
 const SITE_ROOT = new URL('../../', document.currentScript.src).href;
 const IMG_LOCAL = SITE_ROOT + 'arquivos para hospedar/' + IMG_PREFIX;
 const IS_LOCAL = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname);
-const imgUrl = name => (IS_LOCAL ? IMG_LOCAL : IMG_HOSTED) + name;
+const imgUrl = name => name.startsWith('iplace-') ? (IS_LOCAL ? SITE_ROOT + 'arquivos para hospedar/' : 'https://www.iplace.com.br/file/general/') + name : (IS_LOCAL ? IMG_LOCAL : IMG_HOSTED) + name; // nomes que já começam com iplace- são o arquivo completo
 
 // Imagens de HTML estático (ex.: logo do cabeçalho): <img data-img="logo-iplace.svg">
 document.querySelectorAll('img[data-img]').forEach(i => { i.src = imgUrl(i.dataset.img); });
